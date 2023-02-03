@@ -1,5 +1,6 @@
 import 'package:appflutter/screens/list.dart';
 import 'package:flutter/material.dart';
+import 'package:appflutter/theme/app_theme.dart';
 
 class OpenScreen extends StatelessWidget {
    
@@ -9,7 +10,7 @@ class OpenScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        color: const Color.fromARGB(255, 230, 49, 76),
+        color: AppTheme.primary,
         child: Column(
             children: <Widget>[
               Expanded(child: Container(
@@ -35,6 +36,11 @@ class OpenScreen extends StatelessWidget {
                   Text('__________________________'),
                 ],
               )),
+
+
+              // Aquí hay que hacer el formulario de login/register
+
+
               Expanded(child: Column(
                 children: const [
                   Navegate(link: ListScreen())
