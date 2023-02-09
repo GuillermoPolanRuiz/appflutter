@@ -2,10 +2,17 @@ import 'package:appflutter/screens/list.dart';
 import 'package:flutter/material.dart';
 import 'package:appflutter/theme/app_theme.dart';
 
-class OpenScreen extends StatelessWidget {
-   
-  const OpenScreen({Key? key}) : super(key: key);
-  
+class OpenScreen extends StatefulWidget {
+  const OpenScreen({super.key});
+
+  @override
+  State<OpenScreen> createState() => _OpenScreenState();
+}
+
+class _OpenScreenState extends State<OpenScreen> {
+  bool isChecked = false;
+  final _formKey = GlobalKey<FormState>();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,7 +46,7 @@ class OpenScreen extends StatelessWidget {
 
 
               // Aquí hay que hacer el formulario de login/register
-
+              mainForm(),
 
               Expanded(child: Column(
                 children: const [
@@ -52,8 +59,75 @@ class OpenScreen extends StatelessWidget {
       )
     );
   }
+  
+  mainForm() {
+    return Form(
+          key: _formKey,
+          child:
+          Column(children: <Widget>[
+          TextFormField(
+            validator: (value) {
+              if (value == null || value.isEmpty || value.length < 3) {
+                return 'Min 3 caracteres';
+              }
+                return null;
+              },
+            decoration: const InputDecoration(
+              icon: Icon(Icons.supervised_user_circle),
+              hintText: "Nombre de usuario",
+              labelText: "Nombre",
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10))
+              ),
+              suffixIcon: Icon(Icons.supervised_user_circle),
+              counterText: "3 carácteres"
+            ),
+          ),
 
+          Container(padding: const EdgeInsets.all(10),),
+
+          TextFormField(
+            validator: (value) {
+              if (value == null || value.isEmpty || value.length < 6) {
+                return 'Min 6 caracteres';
+              }
+                return null;
+              },
+            obscureText: true,
+            decoration: const InputDecoration(
+              icon: Icon(Icons.supervised_user_circle),
+              hintText: "Contraseña",
+              labelText: "Contraseña",
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10))
+              ),
+              suffixIcon: Icon(Icons.supervised_user_circle),
+              counterText: "6 carácteres"
+            ),
+          ),
+
+
+          Container(padding: const EdgeInsets.all(10),),
+
+          ElevatedButton(
+            onPressed: () {
+              if (_formKey.currentState!.validate()) {
+              ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(content: Text('Cargando Formulario')),
+              );
+              }
+            },
+            child: const Text('Aceptar'),
+          ),
+        ],
+      )
+    );
+  }
+  
 }
+
+
+
 
 
 
