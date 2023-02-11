@@ -13,7 +13,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'SearchNA',
+      debugShowCheckedModeBanner: false,
       theme: AppTheme.mainTheme,
       home: const OpenScreen()
     );

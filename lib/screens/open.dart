@@ -32,7 +32,7 @@ class _OpenScreenState extends State<OpenScreen> {
                 children: const [
                   Text('\n__________________________'),
                   Text(
-                    'Buscador de cultura\nen Navarra',
+                    'SearchNA',
                     style: TextStyle(
                       fontSize: 35 ,
                       color: Colors.white,
@@ -46,7 +46,7 @@ class _OpenScreenState extends State<OpenScreen> {
 
 
               // Aquí hay que hacer el formulario de login/register
-              mainForm(),
+              //mainForm(),
 
               Expanded(child: Column(
                 children: const [
