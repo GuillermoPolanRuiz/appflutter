@@ -17,7 +17,6 @@ class _OpenScreenState extends State<OpenScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        color: AppTheme.primary,
         child: Column(
             children: <Widget>[
               Expanded(child: Container(
@@ -35,7 +34,7 @@ class _OpenScreenState extends State<OpenScreen> {
                     'SearchNA',
                     style: TextStyle(
                       fontSize: 35 ,
-                      color: Colors.white,
+                      color: AppTheme.primary,
                       fontWeight: FontWeight.bold,
                     ),
                     textAlign: TextAlign.center,
@@ -141,7 +140,7 @@ class Navegate extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-        primary: Colors.white,
+        primary: AppTheme.primary,
         minimumSize: const Size(150, 100),
         elevation: 20,
       ),
@@ -154,7 +153,6 @@ class Navegate extends StatelessWidget {
       child: const Icon(
         Icons.arrow_circle_right_sharp,
         size: 60,
-        color: Color.fromARGB(255, 230, 49, 76),
         )
     );
   }

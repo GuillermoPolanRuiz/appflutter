@@ -14,6 +14,9 @@ class AppTheme {
     ),
     scaffoldBackgroundColor: BGcolor,
 
-    
+    listTileTheme: ListTileThemeData(
+      selectedColor: Colors.grey,
+      contentPadding: EdgeInsets.all(20),
+    )
   );
 }

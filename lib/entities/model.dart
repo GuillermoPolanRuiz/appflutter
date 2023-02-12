@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
 class Model{
-  String? title;
-  String? text; 
+  String? name;
+  String? cor; 
 
-  Model(this.title, this.text);
+  Model(this.name, this.cor);
   
   Model.fromJson(Map<String, dynamic> json){
-    title = json['Title'];
-    text = json['Text'];
+    name = json['name'];
+    cor = json['cor'];
   }
   
 }

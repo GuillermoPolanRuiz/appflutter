@@ -1,0 +1,19 @@
+{
+    "pueblos":[{
+        "name":"pueblo1",
+        "cor":"124324235"
+    },
+    {
+        "name":"pueblo2",
+        "cor":"124324235"
+    },
+    {
+        "name":"pueblo3",
+        "cor":"124324235"
+    },
+    {
+        "name":"pueblo4",
+        "cor":"124324235"
+    }
+    ]
+}
