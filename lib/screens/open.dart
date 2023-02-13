@@ -19,16 +19,9 @@ class _OpenScreenState extends State<OpenScreen> {
       body: Container(
         child: Column(
             children: <Widget>[
-              Expanded(child: Container(
-                decoration: const BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage('logoNA.jpg'),
-                    )
-                  ),
-                )
-              ),
               Expanded(child: Column(
-                children: const [
+                children: [
+                  Container(padding: const EdgeInsets.all(40),),
                   Text('\n__________________________'),
                   Text(
                     'SearchNA',
@@ -42,13 +35,21 @@ class _OpenScreenState extends State<OpenScreen> {
                   Text('__________________________'),
                 ],
               )),
-
+              Expanded(child: Container(
+                decoration: const BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage('mapaNA.jpg'),
+                    )
+                  ),
+                )
+              ),
 
               // Aquí hay que hacer el formulario de login/register
               //mainForm(),
 
               Expanded(child: Column(
-                children: const [
+                children: [
+                  Container(padding: const EdgeInsets.all(30),),
                   Navegate(link: ListScreen())
                 ],
                 )

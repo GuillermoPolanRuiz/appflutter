@@ -39,22 +39,23 @@ class _lugaresScreen extends State<LugaresScreen> {
                 );
               },
             ),
-          ): ElevatedButton(
-              onPressed: () {
-                
-              },
-              child: Center(child: Text("Load Json")))
+          ):Container()
         ],
       ),
     );
   }
   
+  @override
+  void initState() {
+    super.initState();
+    readJson();
+  }
 
   Future<void> readJson() async{
     final String response = await rootBundle.loadString('assets/lugares.json');
     final data = await json.decode(response);
     setState(() {
-      _items = data["pueblos"];
+      _items = data["lugares"];
       print("${_items.length}");
     });
   }
