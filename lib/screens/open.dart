@@ -1,3 +1,4 @@
+import 'package:appflutter/screens/config.dart';
 import 'package:appflutter/screens/list.dart';
 import 'package:flutter/material.dart';
 import 'package:appflutter/theme/app_theme.dart';
@@ -55,6 +56,15 @@ class _OpenScreenState extends State<OpenScreen> {
                   Navegate(link: ListScreen())
                 ],
                 )
+              ),
+
+              Container(
+                padding: EdgeInsets.only(bottom: 50),
+                child: Column(
+                children: [
+                  ConfigBtn(link: ConfigScreen())
+                ],
+              ),
               )
             ],
           ),
@@ -63,6 +73,23 @@ class _OpenScreenState extends State<OpenScreen> {
   }
 }
 
+
+class ScrollScreen extends StatelessWidget {
+  const ScrollScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: PageView(
+        scrollDirection: Axis.horizontal,
+        children: [
+          OpenScreen(),
+          ListScreen()
+        ],
+      ),
+    );
+  }
+}
 
 
 
@@ -91,6 +118,34 @@ class Navegate extends StatelessWidget {
       child: const Icon(
         Icons.arrow_circle_right_sharp,
         size: 60,
+        )
+    );
+  }
+}
+
+class ConfigBtn extends StatelessWidget {
+  final Widget link;
+  const ConfigBtn({
+    Key? key, required this.link,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      style: ElevatedButton.styleFrom(
+        primary: AppTheme.primary,
+        minimumSize: const Size(20, 20),
+        elevation: 20,
+      ),
+      onPressed: () => Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => link
+            )
+        ),
+      child: const Icon(
+        Icons.settings,
+        size: 40,
         )
     );
   }

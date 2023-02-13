@@ -8,7 +8,8 @@ import '../../entities/model.dart';
 
 class ListDataScreen extends StatefulWidget{
   final String name;
-  const ListDataScreen({ super.key, required this.name});
+  final String text;
+  const ListDataScreen({ super.key, required this.name, required this.text});
 
   @override
   _ListDataScreen createState() => _ListDataScreen();
@@ -20,7 +21,7 @@ class _ListDataScreen extends State<ListDataScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Pueblos"),
+        title: Text("${widget.text}"),
       ),
       body: Column(
         children: [

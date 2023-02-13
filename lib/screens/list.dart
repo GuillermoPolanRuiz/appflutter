@@ -26,8 +26,8 @@ class _ListScreen extends State<ListScreen> {
       body: Center(
          child: ListView(
           children: const [
-            listClass(link: ListDataScreen(name: 'pueblos',), text: "Pueblos", icon: Icons.villa_rounded),
-            listClass(link: ListDataScreen(name: 'lugares'), text: "Lugares", icon: Icons.place),
+            listClass(link: ListDataScreen(name: 'pueblos', text: 'Pueblos',), text: "Pueblos", icon: Icons.villa_rounded),
+            listClass(link: ListDataScreen(name: 'lugares', text: 'Lugares',), text: "Lugares", icon: Icons.place),
           ],
          ),
       ),

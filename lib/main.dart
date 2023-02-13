@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'SearchNA',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.mainTheme,
-      home: const OpenScreen()
+      home: const ScrollScreen()
     );
   }
 }
