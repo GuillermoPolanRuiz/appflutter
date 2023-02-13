@@ -1,7 +1,6 @@
 import 'dart:convert';
 
-import 'package:appflutter/screens/pueblos/pueblos.dart';
-import 'package:appflutter/screens/lugares/lugares.dart';
+import 'package:appflutter/screens/listData.dart';
 import 'package:flutter/material.dart';
 import 'package:appflutter/entities/model.dart';
 import 'package:flutter/services.dart' as rootBundle;
@@ -27,15 +26,13 @@ class _ListScreen extends State<ListScreen> {
       body: Center(
          child: ListView(
           children: const [
-            listClass(link: PueblosScreen(), text: "Pueblos", icon: Icons.villa_rounded),
-            listClass(link: LugaresScreen(), text: "Lugares", icon: Icons.place),
+            listClass(link: ListDataScreen(name: 'pueblos',), text: "Pueblos", icon: Icons.villa_rounded),
+            listClass(link: ListDataScreen(name: 'lugares'), text: "Lugares", icon: Icons.place),
           ],
          ),
       ),
     );
   }
-
-  
 }
 
 

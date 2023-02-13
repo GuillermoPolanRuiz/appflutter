@@ -19,6 +19,8 @@ class _OpenScreenState extends State<OpenScreen> {
       body: Container(
         child: Column(
             children: <Widget>[
+
+              // Texto superior
               Expanded(child: Column(
                 children: [
                   Container(padding: const EdgeInsets.all(40),),
@@ -35,18 +37,18 @@ class _OpenScreenState extends State<OpenScreen> {
                   Text('__________________________'),
                 ],
               )),
+
+              // Imagen de Navarra
               Expanded(child: Container(
                 decoration: const BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage('mapaNA.jpg'),
+                    image: AssetImage('assets/mapaNA.jpg'),
                     )
                   ),
                 )
               ),
 
-              // Aquí hay que hacer el formulario de login/register
-              //mainForm(),
-
+              // Botón rojo
               Expanded(child: Column(
                 children: [
                   Container(padding: const EdgeInsets.all(30),),
@@ -59,77 +61,12 @@ class _OpenScreenState extends State<OpenScreen> {
       )
     );
   }
-  
-  mainForm() {
-    return Form(
-          key: _formKey,
-          child:
-          Column(children: <Widget>[
-          TextFormField(
-            validator: (value) {
-              if (value == null || value.isEmpty || value.length < 3) {
-                return 'Min 3 caracteres';
-              }
-                return null;
-              },
-            decoration: const InputDecoration(
-              icon: Icon(Icons.supervised_user_circle),
-              hintText: "Nombre de usuario",
-              labelText: "Nombre",
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10))
-              ),
-              suffixIcon: Icon(Icons.supervised_user_circle),
-              counterText: "3 carácteres"
-            ),
-          ),
-
-          Container(padding: const EdgeInsets.all(10),),
-
-          TextFormField(
-            validator: (value) {
-              if (value == null || value.isEmpty || value.length < 6) {
-                return 'Min 6 caracteres';
-              }
-                return null;
-              },
-            obscureText: true,
-            decoration: const InputDecoration(
-              icon: Icon(Icons.supervised_user_circle),
-              hintText: "Contraseña",
-              labelText: "Contraseña",
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10))
-              ),
-              suffixIcon: Icon(Icons.supervised_user_circle),
-              counterText: "6 carácteres"
-            ),
-          ),
-
-
-          Container(padding: const EdgeInsets.all(10),),
-
-          ElevatedButton(
-            onPressed: () {
-              if (_formKey.currentState!.validate()) {
-              ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(content: Text('Cargando Formulario')),
-              );
-              }
-            },
-            child: const Text('Aceptar'),
-          ),
-        ],
-      )
-    );
-  }
-  
 }
 
 
 
 
-
+// Clase para el botón rojo
 
 class Navegate extends StatelessWidget {
   final Widget link;

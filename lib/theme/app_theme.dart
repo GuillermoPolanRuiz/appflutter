@@ -17,6 +17,10 @@ class AppTheme {
     listTileTheme: ListTileThemeData(
       selectedColor: Colors.grey,
       contentPadding: EdgeInsets.all(20),
+    ),
+
+    iconTheme: IconThemeData(
+      color: primary
     )
   );
 }

@@ -1,10 +1,46 @@
 ﻿{
-  "fields": [{"type":"int","id":"_id"},{"type":"numeric","id":"Codrecurso"},{"type":"text","id":"URLNombreCast"},{"type":"text","id":"Nombre"},{"type":"text","id":"URLNombreBuscador"},{"type":"numeric","id":"URLIdRecursoCategoria"},{"type":"text","id":"CodCategoria"},{"type":"numeric","id":"IdRecursoCategoria"},{"type":"numeric","id":"IDCATEGORIA"},{"type":"text","id":"NombreLocalidad"},{"type":"text","id":"DescripZona"},{"type":"text","id":"Path"},{"type":"text","id":"ImgFichero"},{"type":"text","id":"Tipo"},{"type":"text","id":"ESTILO"},{"type":"text","id":"Distancia"},{"type":"numeric","id":"GEORR_X"},{"type":"numeric","id":"GEORR_Y"},{"type":"text","id":"DIPLOMACOMPROMISO"}],
-  "records": [
-    [65,5232,"Museo y Yacimiento Arqueológico \"Las Eretas\"","Museo y Yacimiento Arqueológico \"Las Eretas\"","Patrimonio",7596,"",7596,5020600,"BERBINZANA","Zona Media","04\\04\\01\\00\\","5232FotoTH1.jpg","Restos arqueológicos","","",595980,4709003,"NO"],
-    [66,2913,"Museo y yacimiento arqueológico de Andelos","Museo y yacimiento arqueológico de Andelos","Patrimonio",7597,"",7597,5020600,"MENDIGORRÍA","Zona Media","04\\04\\01\\00\\","2913FotoTH1.jpg","Restos arqueológicos","Romano","",593573,4716927,"NO"],
-    [67,4753,"Museo y yacimiento arqueológico Villa de Arellano","Museo y yacimiento arqueológico Villa de Arellano","Patrimonio",7598,"",7598,5020600,"ARELLANO","Zona Media","04\\04\\01\\00\\","4753FotoTH1.jpg","Restos arqueológicos","Romano","",576032,4711524,"NO"],
-    [69,5967,"Palacio de los Mencos","Palacio de los Mencos","Patrimonio",8856,"",8856,5020400,"TAFALLA","Zona Media","03\\01\\00\\00\\","5967FotoTH2.JPG","Castillos/Palacios","","",608707,4709026,"NO"],
-    [83,2924,"Recinto Amurallado de Rada","Recinto Amurallado de Rada","Patrimonio",7599,"",7599,5020600,"MURILLO EL CUENDE","La Ribera","04\\04\\01\\00\\","2924FotoTH1.jpg","Restos arqueológicos","Románico","",613962,4688557,"NO"]
-]}
-
+  "lugares":[
+      {
+          "id":"1",
+          "name":"Lugar1",
+          "cor":"124324235"
+      },
+      {
+          "id":"2",
+          "name":"Lugar2",
+          "cor":"124324235"
+      },
+      {
+          "id":"3",
+          "name":"Lugar3",
+          "cor":"124324235"
+      },
+      {
+          "id":"4",
+          "name":"Lugar4",
+          "cor":"124324235"
+      }
+  ],
+  "pueblos":[
+    {
+        "id":"1",
+        "name":"Pueblo1",
+        "cor":"124324235"
+    },
+    {
+        "id":"2",
+        "name":"Pueblo2",
+        "cor":"124324235"
+    },
+    {
+        "id":"3",
+        "name":"Pueblo3",
+        "cor":"124324235"
+    },
+    {
+        "id":"4",
+        "name":"Pueblo4",
+        "cor":"124324235"
+    }
+]
+}
