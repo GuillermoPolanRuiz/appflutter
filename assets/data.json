@@ -2,50 +2,60 @@
   "lugares":[
       {
           "id":"1",
-          "name":"Lugar1",
-          "cor":"124324235"
+          "name":"Ochagavía",
+          "desc":"",
+          "image":""
       },
       {
           "id":"2",
           "name":"Lugar2",
-          "cor":"124324235"
+          "desc":"124324235",
+          "image":""
       },
       {
           "id":"3",
           "name":"Lugar3",
-          "cor":"124324235"
+          "desc":"124324235",
+          "image":""
       },
       {
           "id":"4",
           "name":"Lugar4",
-          "cor":"124324235"
+          "desc":"124324235",
+          "image":""
       },
       {
         "id":"4",
         "name":"Lugar4",
-        "cor":"124324235"
+        "desc":"124324235",
+        "image":""
     }
   ],
   "pueblos":[
     {
         "id":"1",
-        "name":"Pueblo1",
-        "cor":"124324235"
+        "name":"Ochagavía",
+        "desc":"Si arrancamos por el norte, muy cerca de Francia, nos encontramos con Salazar, un valle central del Pirineo navarro.",
+        "image":"https://www.guiarepsol.com/content/dam/repsol-guia/contenidos-imagenes/viajar/vamos-de-excursion/pueblos-bonitos-navarra/gr-cms-media-featured_images-none-feb011b2-5250-4859-ac78-8323685997f2-04rio-ochagavia.jpg.transform/rp-rendition-lg/image.jpg"
+
     },
     {
         "id":"2",
-        "name":"Pueblo2",
-        "cor":"124324235"
+        "name":"Isaba",
+        "desc":"A 30 minutos de Ochagavía en coche aparece otro pueblito: Isaba. Se ubica en el Valle del Roncal y cumple con la estética de construcciones de madera y piedra repartidas por estrechas y empedradas callejuelas.",
+        "image":"https://www.guiarepsol.com/content/dam/repsol-guia/contenidos-imagenes/viajar/vamos-de-excursion/pueblos-bonitos-navarra/gr-cms-media-featured_images-none-145d31da-2c92-4b17-9d40-3fae2868ed97-quesos-roncal-isaba-87.jpg.transform/rp-rendition-lg/image.jpg"
     },
     {
         "id":"3",
-        "name":"Pueblo3",
-        "cor":"124324235"
+        "name":"Etxalar",
+        "desc":"Entre montañas suaves y prados verdes, y bañada por las aguas del río Tximista, dormita otra perla del turismo rural en Navarra. Etxalar es otra postal de la vida campestre de apenas 828 habitantes, pero que se ha mantenido pese a la despoblación general en favor de las ciudades.",
+        "image":"https://www.guiarepsol.com/content/dam/repsol-guia/contenidos-imagenes/viajar/vamos-de-excursion/pueblos-bonitos-navarra/gr-cms-media-featured_images-none-cb0b79f0-bdb2-4d67-8a60-ba972458f33e-etxalar_javier-campos_turismo-de-navarra.jpg.transform/rp-rendition-lg/image.jpg"
     },
     {
         "id":"4",
-        "name":"Pueblo4",
-        "cor":"124324235"
+        "name":"Elizondo",
+        "desc":"Para los que no lo sepan, el valle de Baztan es un único municipio formado por 15 pueblos. Su paisaje y su paisanaje han sido inspiración para la grabación de muchas películas y la escritura de novelas como La trilogía del Baztán, de Dolores Redondo.",
+        "image":"https://www.guiarepsol.com/content/dam/repsol-guia/contenidos-imagenes/viajar/vamos-de-excursion/pueblos-bonitos-navarra/gr-cms-media-featured_images-none-8f79673a-f7a2-488b-b193-357dfc1c4588-thumbnails-valle-de-baztan_alkaxuri_turismo-de-navarra-jpg-0x740_q100.jpg.transform/rp-rendition-lg/image.jpg"
     }
 ]
 }

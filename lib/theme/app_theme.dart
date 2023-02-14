@@ -3,12 +3,20 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 
 class AppTheme {
-  static const Color primary = Color.fromARGB(255, 230, 49, 76);
-  //static const Color iconsColor = Color.fromARGB(255, 8, 49, 185);
-  static const Color BGcolor = Color.fromARGB(255, 255, 255, 255);
+  static Color primary = Color.fromARGB(255, 230, 49, 76);
+  static Color BGcolor = Color.fromARGB(255, 255, 255, 255);
+
+
+  static void setOsc(bool isOsc){
+    if (isOsc == true) {
+      //BGcolor = Color.fromARGB(255, 56, 56, 56);
+    }else{
+      BGcolor = Color.fromARGB(255, 255, 255, 255);;
+    }
+  }
 
   static final mainTheme = ThemeData.light().copyWith(
-    appBarTheme: const AppBarTheme(
+    appBarTheme: AppBarTheme(
       backgroundColor: primary,
       elevation: 1
     ),

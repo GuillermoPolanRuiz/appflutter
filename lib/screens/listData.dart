@@ -38,8 +38,9 @@ class _ListDataScreen extends State<ListDataScreen> {
                     children: [
                       ListTile(
                         title: Text(_items[index]["name"]),
-                        subtitle: Text(_items[index]["cor"]),
+                        subtitle: Text(_items[index]["desc"]),
                       ),
+                      Image.network(_items[index]["image"], scale: 3),
                       ElevatedButton(onPressed: null, child: Text("Cómo llegar")) // Este llevará a Google Maps
                     ],
                   )
@@ -51,10 +52,7 @@ class _ListDataScreen extends State<ListDataScreen> {
       ),
     );
   }
-  
-  void setParams(String p_name, String p_text){
 
-  }
 
   @override
   void initState() {
