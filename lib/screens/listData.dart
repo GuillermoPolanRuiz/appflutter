@@ -29,22 +29,41 @@ class _ListDataScreen extends State<ListDataScreen> {
             child: ListView.builder(
               itemCount: _items.length,
               itemBuilder: (context, index) {
-                return Card(
-                  key: ValueKey(_items[index]["id"]),
-                  margin: const EdgeInsets.all(10),
-                  color: Color.fromARGB(255, 255, 251, 251),
-                  elevation: 5,
-                  child: Column(
-                    children: [
-                      ListTile(
-                        title: Text(_items[index]["name"]),
-                        subtitle: Text(_items[index]["desc"]),
-                      ),
-                      Image.network(_items[index]["image"], scale: 3),
-                      ElevatedButton(onPressed: null, child: Text("Cómo llegar")) // Este llevará a Google Maps
-                    ],
-                  )
-                );
+                if (_items[index]["es"] == "true") { // Este if va ser para saber si es casa rural o lugar, pueblo...
+                  return Card(
+                    key: ValueKey(_items[index]["id"]),
+                    margin: const EdgeInsets.all(10),
+                    color: Color.fromARGB(255, 255, 251, 251),
+                    elevation: 5,
+                    child: Column(
+                      children: [
+                        ListTile(
+                          title: Text(_items[index]["name"]),
+                          subtitle: Text(_items[index]["desc"]),
+                        ),
+                        Image.network(_items[index]["image"], scale: 3),
+                        ElevatedButton(onPressed: null, child: Text("Cómo llegar")) // Este llevará a Google Maps
+                      ],
+                    )
+                  );
+                }else{
+                  return Card(
+                    key: ValueKey(_items[index]["id"]),
+                    margin: const EdgeInsets.all(10),
+                    color: Color.fromARGB(255, 210, 45, 45),
+                    elevation: 5,
+                    child: Column(
+                      children: [
+                        ListTile(
+                          title: Text(_items[index]["name"]),
+                          subtitle: Text(_items[index]["desc"]),
+                        ),
+                        //Image.network(_items[index]["image"], scale: 3),
+                        ElevatedButton(onPressed: null, child: Text("Cómo llegar")) // Este llevará a Google Maps
+                      ],
+                    )
+                  );
+                }
               },
             ),
           ):Container()
@@ -65,7 +84,7 @@ class _ListDataScreen extends State<ListDataScreen> {
     final data = await json.decode(response);
     setState(() {
       _items = data["${widget.name}"];
-      print("${_items.length}");
+      //print("${_items.length}");
     });
   }
 }

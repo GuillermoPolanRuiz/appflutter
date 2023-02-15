@@ -58,6 +58,7 @@ class _OpenScreenState extends State<OpenScreen> {
                 )
               ),
 
+              // Botón de configuración
               Container(
                 padding: EdgeInsets.only(bottom: 50),
                 child: Column(
@@ -74,6 +75,7 @@ class _OpenScreenState extends State<OpenScreen> {
 }
 
 
+// Clase para el Scroll de inicio
 class ScrollScreen extends StatelessWidget {
   const ScrollScreen({super.key});
 
@@ -93,7 +95,7 @@ class ScrollScreen extends StatelessWidget {
 
 
 
-// Clase para el botón rojo
+// Clase para el botón rojo de avanzar
 
 class Navegate extends StatelessWidget {
   final Widget link;
@@ -123,6 +125,8 @@ class Navegate extends StatelessWidget {
   }
 }
 
+
+// Clase para el Screen de configuración
 class ConfigBtn extends StatelessWidget {
   final Widget link;
   const ConfigBtn({

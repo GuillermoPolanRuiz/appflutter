@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:appflutter/screens/listData.dart';
+import 'package:appflutter/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:appflutter/entities/model.dart';
 import 'package:flutter/services.dart' as rootBundle;
@@ -26,8 +27,9 @@ class _ListScreen extends State<ListScreen> {
       body: Center(
          child: ListView(
           children: const [
-            listClass(link: ListDataScreen(name: 'pueblos', text: 'Pueblos',), text: "Pueblos", icon: Icons.villa_rounded),
-            listClass(link: ListDataScreen(name: 'lugares', text: 'Lugares',), text: "Lugares", icon: Icons.place),
+            ListClass(link: ListDataScreen(name: 'lugares', text: 'Lugares',), text: "Lugares", icon: Icons.place),
+            ListClass(link: ListDataScreen(name: 'pueblos', text: 'Pueblos',), text: "Pueblos", icon: Icons.location_city),
+            ListClass(link: ListDataScreen(name: 'casasRurales', text: 'Casas Rurales',), text: "Casas Rurales", icon: Icons.villa_rounded),
           ],
          ),
       ),
@@ -37,11 +39,12 @@ class _ListScreen extends State<ListScreen> {
 
 
 
-class listClass extends StatelessWidget {
+// Clase para generar un ListTile con el link a la Screen, texto e icono
+class ListClass extends StatelessWidget {
   final Widget link;
   final String text;
   final IconData icon;
-  const listClass({
+  const ListClass({
     Key? key, required this.link, required this.text, required this.icon
   }) : super(key: key);
 
@@ -51,6 +54,7 @@ class listClass extends StatelessWidget {
       leading: Icon(
         icon,
         size: 30,
+        color: AppTheme.primary,
       ),
       title: Text(
         text,

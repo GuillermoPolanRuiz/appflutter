@@ -11,6 +11,10 @@ class ConfigScreen extends StatefulWidget {
   State<ConfigScreen> createState() => _ConfigScreenState();
 }
 
+
+//
+//  ESTA CLASE SE ME DESAJUSTA EN MI MOVIL!!!!!!!
+//
 class _ConfigScreenState extends State<ConfigScreen> {
 
 
@@ -22,7 +26,7 @@ class _ConfigScreenState extends State<ConfigScreen> {
       appBar: AppBar(
         title: Text("Configuración"),
       ),
-      body: Container(
+      body: Container( // Varias Rows para cada texto
         padding: const EdgeInsets.all(10),
         child: ListView(
           children: [
@@ -71,9 +75,53 @@ class _ConfigScreenState extends State<ConfigScreen> {
               ],
             ),
             Divider(height: 20, thickness: 1,),
+            SizedBox(height: 20,),
+            
+            // Tabla con la información de la aplicación
+            Container(
+              padding: EdgeInsets.only(left: 30),
+              child: Table(
+              children: [
+                TableRow(
+                  children: [
+                    //SizedBox(width: 1,),
+                    TableCell(child: getText("Versión")),
+                    TableCell(child: getText("Fecha de actualización")),
+                  ]
+                ),
+
+                TableRow(
+                  children: [
+                    //SizedBox(width: 1,),
+                    TableCell(child: Padding(padding: EdgeInsets.only(bottom: 40), child: Text("1.0"),)),
+                    TableCell(child: Text(DateTime.now().day.toString() + "/" + DateTime.now().month.toString() + "/" + DateTime.now().year.toString())),
+                  ]
+                ),
+                
+                TableRow(
+                  children: [
+                    TableCell(child: getText("Correo desarrollador")),
+                    TableCell(child: getText("Ofrecido por")),
+                  ]
+                ),
+
+                TableRow(
+                  children: [
+                    TableCell(child: Text("guillepolanruiz@gmail.com")),
+                    TableCell(child: Text("Guillermo Polán Ruiz")),
+                  ]
+                )
+              ],
+            ),
+            )
           ],
         ),
       ),
     );
+  }
+
+
+  Text getText(String text){
+    return Text(text, style: TextStyle(fontSize: 20));
   }
 }

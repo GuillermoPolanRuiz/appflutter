@@ -2,33 +2,43 @@
   "lugares":[
       {
           "id":"1",
-          "name":"Ochagavía",
-          "desc":"",
-          "image":""
+          "name":"Camino de Santiago",
+          "desc":"Navarra es la puerta de entrada del Camino de Santiago a la Península Ibérica. Una puerta que te adentra en una tierra de tradiciones centenarias, naturaleza salvaje y un exquisito patrimonio histórico.",
+          "image":"https://media.traveler.es/photos/61376e884c612f07ec39945e/16:9/w_2560%2Cc_limit/139250.jpg",
+          "cor":"",
+          "es":"true"
       },
       {
           "id":"2",
-          "name":"Lugar2",
-          "desc":"124324235",
-          "image":""
+          "name":"Bardenas Reales",
+          "desc":"Las Bardenas Reales de Navarra, Bardenas Reales o simplemente Bardenas, constituyen un paraje semidesértico de 41 845 ha que se extiende por el sureste de la comunidad autónoma española de Navarra y parte de la de Aragón donde ocupa territorio de los municipios de Sádaba, Tauste y Ejea de los Caballeros.",
+          "image":"https://www.visitnavarra.es/o/adaptive-media/image/8203724/turismo-navarra-1400xauto/6%20traslucida.jpg",
+          "cor":"",
+          "es":"true"
       },
       {
           "id":"3",
-          "name":"Lugar3",
-          "desc":"124324235",
-          "image":""
+          "name":"La Selva de Irati",
+          "desc":"Mucho se ha escrito sobre la Selva de Irati y su indiscutible belleza. Y es normal, ya que se trata uno de los hayedos-abetales más grandes y mejor conservados de Europa. Un extenso bosque que, aunque se haya explotado forestalmente desde el S.XV, se conserva en plena forma gracias al respeto que le ha mostrado la ciudadanía de estos valles.",
+          "image":"https://www.escapadarural.com/blog/wp-content/uploads/2020/01/Selva-de-Irati-7.jpg",
+          "cor":"",
+          "es":"true"
       },
       {
           "id":"4",
-          "name":"Lugar4",
-          "desc":"124324235",
-          "image":""
+          "name":"El Valle del Baztán",
+          "desc":"Empezamos con las visitas obligadas. Esos lugares que tienes que visitar sí o sí en tu paso por Baztan. Elizondo es uno de ellos. Localidad principal del valle, su arquitectura a base de palacetes y casas señoriales refleja la riqueza que trajeron de vuelta aquellas personas que emigraron a América.",
+          "image":"https://www.diariodenavarra.es/uploads/2021/07/09/60e827dc21d1e.jpeg",
+          "cor":"",
+          "es":"true"
       },
       {
-        "id":"4",
-        "name":"Lugar4",
-        "desc":"124324235",
-        "image":""
+        "id":"5",
+        "name":"Cuevas de Zugarramurdi",
+        "desc":"Muy cerquita de Francia, al norte del Valle de Baztan, entre paisajes verde-azulados, se sitúa Zugarramurdi, el famoso «Pueblo de las Brujas». Un paisaje conformado por bellos caserones, vacas pastando y el típico entramado urbano pirenaico perfectamente custodiado por la Iglesia de la Asunción. Se trata de un pueblo de lo más animado, con servicios y atractivos que bien merecen una visita por sí solos.",
+        "image":"https://www.visitnavarra.es/documents/8191683/8201425/1+cabecera.jpg/85016af6-29d8-4d46-7f2c-6cfe9124c616?t=1619722965434",
+        "cor":"",
+        "es":"true"
     }
   ],
   "pueblos":[
@@ -36,26 +46,91 @@
         "id":"1",
         "name":"Ochagavía",
         "desc":"Si arrancamos por el norte, muy cerca de Francia, nos encontramos con Salazar, un valle central del Pirineo navarro.",
-        "image":"https://www.guiarepsol.com/content/dam/repsol-guia/contenidos-imagenes/viajar/vamos-de-excursion/pueblos-bonitos-navarra/gr-cms-media-featured_images-none-feb011b2-5250-4859-ac78-8323685997f2-04rio-ochagavia.jpg.transform/rp-rendition-lg/image.jpg"
-
+        "image":"https://www.guiarepsol.com/content/dam/repsol-guia/contenidos-imagenes/viajar/vamos-de-excursion/pueblos-bonitos-navarra/gr-cms-media-featured_images-none-feb011b2-5250-4859-ac78-8323685997f2-04rio-ochagavia.jpg.transform/rp-rendition-lg/image.jpg",
+        "cor":"",
+        "es":"true"
     },
     {
         "id":"2",
         "name":"Isaba",
         "desc":"A 30 minutos de Ochagavía en coche aparece otro pueblito: Isaba. Se ubica en el Valle del Roncal y cumple con la estética de construcciones de madera y piedra repartidas por estrechas y empedradas callejuelas.",
-        "image":"https://www.guiarepsol.com/content/dam/repsol-guia/contenidos-imagenes/viajar/vamos-de-excursion/pueblos-bonitos-navarra/gr-cms-media-featured_images-none-145d31da-2c92-4b17-9d40-3fae2868ed97-quesos-roncal-isaba-87.jpg.transform/rp-rendition-lg/image.jpg"
+        "image":"https://www.guiarepsol.com/content/dam/repsol-guia/contenidos-imagenes/viajar/vamos-de-excursion/pueblos-bonitos-navarra/gr-cms-media-featured_images-none-145d31da-2c92-4b17-9d40-3fae2868ed97-quesos-roncal-isaba-87.jpg.transform/rp-rendition-lg/image.jpg",
+        "cor":"",
+        "es":"true"
     },
     {
         "id":"3",
         "name":"Etxalar",
         "desc":"Entre montañas suaves y prados verdes, y bañada por las aguas del río Tximista, dormita otra perla del turismo rural en Navarra. Etxalar es otra postal de la vida campestre de apenas 828 habitantes, pero que se ha mantenido pese a la despoblación general en favor de las ciudades.",
-        "image":"https://www.guiarepsol.com/content/dam/repsol-guia/contenidos-imagenes/viajar/vamos-de-excursion/pueblos-bonitos-navarra/gr-cms-media-featured_images-none-cb0b79f0-bdb2-4d67-8a60-ba972458f33e-etxalar_javier-campos_turismo-de-navarra.jpg.transform/rp-rendition-lg/image.jpg"
+        "image":"https://www.guiarepsol.com/content/dam/repsol-guia/contenidos-imagenes/viajar/vamos-de-excursion/pueblos-bonitos-navarra/gr-cms-media-featured_images-none-cb0b79f0-bdb2-4d67-8a60-ba972458f33e-etxalar_javier-campos_turismo-de-navarra.jpg.transform/rp-rendition-lg/image.jpg",
+        "cor":"",
+        "es":"true"
     },
     {
         "id":"4",
         "name":"Elizondo",
         "desc":"Para los que no lo sepan, el valle de Baztan es un único municipio formado por 15 pueblos. Su paisaje y su paisanaje han sido inspiración para la grabación de muchas películas y la escritura de novelas como La trilogía del Baztán, de Dolores Redondo.",
-        "image":"https://www.guiarepsol.com/content/dam/repsol-guia/contenidos-imagenes/viajar/vamos-de-excursion/pueblos-bonitos-navarra/gr-cms-media-featured_images-none-8f79673a-f7a2-488b-b193-357dfc1c4588-thumbnails-valle-de-baztan_alkaxuri_turismo-de-navarra-jpg-0x740_q100.jpg.transform/rp-rendition-lg/image.jpg"
+        "image":"https://www.guiarepsol.com/content/dam/repsol-guia/contenidos-imagenes/viajar/vamos-de-excursion/pueblos-bonitos-navarra/gr-cms-media-featured_images-none-8f79673a-f7a2-488b-b193-357dfc1c4588-thumbnails-valle-de-baztan_alkaxuri_turismo-de-navarra-jpg-0x740_q100.jpg.transform/rp-rendition-lg/image.jpg",
+        "cor":"",
+        "es":"true"
+    },
+    {
+        "id":"5",
+        "name":"Ujué",
+        "desc":"Este pueblo alardea de unas vistas infinitas. Se trata de una villa medieval de 171 habitantes ubicada a 53 kilómetros de Pamplona.",
+        "image":"https://www.guiarepsol.com/content/dam/repsol-guia/contenidos-imagenes/viajar/vamos-de-excursion/pueblos-bonitos-navarra/gr-cms-media-featured_images-none-d4007bd9-335e-4db1-831b-819e99921d3d-batch2_ujue-55.jpg.transform/rp-rendition-lg/image.jpg",
+        "cor":"",
+        "es":"true"
+    },
+    {
+        "id":"6",
+        "name":"Zugarramurdi",
+        "desc":"Merece la pena ver el Palacio Dutaria, la Iglesia de Nuestra Asunción, la Casa Consistorial... y, sobre todo, la Cueva de Zugarramurdi, donde por lo visto tenían lugar celebraciones paganas.",
+        "image":"https://www.guiarepsol.com/content/dam/repsol-guia/contenidos-imagenes/viajar/vamos-de-excursion/pueblos-bonitos-navarra/gr-cms-media-featured_images-none-b566cd4b-0328-4b02-b792-ac6c61570280-batch_zugarramurdi-6.jpg.transform/rp-rendition-lg/image.jpg",
+        "cor":"",
+        "es":"true"
+    },
+    {
+        "id":"7",
+        "name":"Lesaka",
+        "desc":"Este pueblo puede que suene familiar gracias a la fama de la tortilla de patatas que cocinaba Josefina Sagardia en el restaurante ‘Kasino Lesaka’ (Recomendado por Guía Repsol). Su receta, sin darle la vuelta y doblando la mezcla como si fuera una enorme tortilla francesa, marcó un estilo que hoy se imita de norte a sur.",
+        "image":"https://www.guiarepsol.com/content/dam/repsol-guia/contenidos-imagenes/viajar/vamos-de-excursion/pueblos-bonitos-navarra/gr-cms-media-featured_images-none-11ac9a99-9a13-4327-be80-75761c0c0faa-lesaka_javier-campos_turismo-de-navarra.jpg.transform/rp-rendition-lg/image.jpg",
+        "cor":"",
+        "es":"true"
+    },
+    {
+        "id":"8",
+        "name":"Olite",
+        "desc":"Es probable que esta localidad ofrezca lo más parecido a transportarse a la Edad Media. Tal es la conservación de su patrimonio arquitectónico que Olite y su castillo son un reclamo turístico de primer orden.",
+        "image":"https://www.guiarepsol.com/content/dam/repsol-guia/contenidos-imagenes/viajar/vamos-de-excursion/pueblos-bonitos-navarra/gr-cms-media-featured_images-portada_olite.jpg.transform/rp-rendition-lg/image.jpg",
+        "cor":"",
+        "es":"true"
+    },
+    {
+        "id":"9",
+        "name":"Artajona",
+        "desc":"Y sin salir del medievo llegamos a Artajona, que desde la lejanía se distingue por el perfil impotente de El Cerco, un conjunto amurallado medieval del siglo XI. Nada menos que nueve torreones almenados y coronados por la iglesia-fortaleza de San Saturnino, del siglo XIII, declarada Monumento Histórico Artístico.",
+        "image":"https://www.guiarepsol.com/content/dam/repsol-guia/contenidos-imagenes/viajar/vamos-de-excursion/pueblos-bonitos-navarra/gr-cms-media-featured_images-none-8e7ac17f-9c4b-41e7-8dd5-e07327c04c5d-artajona_francis-vaquero_turismo-de-navarra.jpg.transform/rp-rendition-lg/image.jpg",
+        "cor":"",
+        "es":"true"
+    },
+    {
+        "id":"10",
+        "name":"Puente la Reina",
+        "desc":"Desde la carretera, a 23 kilómetros de Pamplona, se ve deslumbrante el puente románico sobre el río Arga, que inspira el nombre de este pueblo. También se conoce como cruce de caminos, pues lo atraviesan las dos principales vías del Camino de Santiago.",
+        "image":"https://www.guiarepsol.com/content/dam/repsol-guia/contenidos-imagenes/viajar/vamos-de-excursion/pueblos-bonitos-navarra/gr-cms-media-featured_images-none-08192883-dd61-43a7-82da-58a1cfbe4a0d-puentedelareina.jpg.transform/rp-rendition-lg/image.jpg",
+        "cor":"",
+        "es":"true"
     }
-]
+    ],
+    "casasRurales":[
+        {
+            "id":"1",
+            "name":"a",
+            "desc":"a",
+            "image":"https://www.guiarepsol.com/content/dam/repsol-guia/contenidos-imagenes/viajar/vamos-de-excursion/pueblos-bonitos-navarra/gr-cms-media-featured_images-none-08192883-dd61-43a7-82da-58a1cfbe4a0d-puentedelareina.jpg.transform/rp-rendition-lg/image.jpg",
+            "cor":"",
+            "es":"true"
+        }
+    ]
 }
