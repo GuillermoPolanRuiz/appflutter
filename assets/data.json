@@ -126,11 +126,103 @@
     "casasRurales":[
         {
             "id":"1",
-            "name":"a",
+            "name":"Errandonea Casa Rural",
+            "ubc":"Teileri Karrika, 14, 31753 Beintza-Labaien",
             "desc":"a",
-            "image":"https://www.guiarepsol.com/content/dam/repsol-guia/contenidos-imagenes/viajar/vamos-de-excursion/pueblos-bonitos-navarra/gr-cms-media-featured_images-none-08192883-dd61-43a7-82da-58a1cfbe4a0d-puentedelareina.jpg.transform/rp-rendition-lg/image.jpg",
+            "image":"https://media3.clubrural.com/img695x521/navarra/errandonea-casa-rural/189813_errandonea-casa-rural_0005811001598712311_o.jpg",
             "cor":"",
-            "es":"true"
+            "es":"false",
+            "price":"21"
+        },
+        {
+            "id":"2",
+            "name":"Mikelenetxiki y Mikelenea",
+            "ubc":"Calle San Cristóbal, 31878 Arruiz",
+            "desc":"a",
+            "image":"https://media3.clubrural.com/img695x521/navarra/mikelenea-_-mikelenetxik/143932_mikelenea-_-mikelenetxik_0028452001578942949_o.jpg",
+            "cor":"",
+            "es":"false",
+            "price":"25"
+        },
+        {
+            "id":"3",
+            "name":"Casa Rural La Tahona",
+            "ubc":"C/Tahona, 27, 31260 Lerín",
+            "desc":"a",
+            "image":"https://media3.clubrural.com/img695x521/navarra/casa-rural-la-tahona/129875_casa-rural-la-tahona_0284807001606317133_o.jpg",
+            "cor":"",
+            "es":"false",
+            "price":"44"
+        },
+        {
+            "id":"4",
+            "name":"Casa Gamioa",
+            "ubc":"C/Beartzun, s/n, Elizondo",
+            "desc":"a",
+            "image":"https://media3.clubrural.com/img695x521/navarra/casa-gamioa/125315_casa-gamioa_0940366001646813034_o.jpg",
+            "cor":"",
+            "es":"false",
+            "price":"32"
+        },
+        {
+            "id":"5",
+            "name":"Casa Rural Oscar",
+            "ubc":"C/ Juan XXIII, 15, Cabanillas",
+            "desc":"a",
+            "image":"https://media3.clubrural.com/img695x521/navarra/casa-rural-oscar/135757_casa-rural-oscar_0472479001565213318_o.jpg",
+            "cor":"",
+            "es":"false",
+            "price":"21"
+        },
+        {
+            "id":"6",
+            "name":"Casa Manchoalorra",
+            "ubc":"C/ Mantxoalorra, 1 A, Ochagavia",
+            "desc":"a",
+            "image":"https://media3.clubrural.com/img684x521/navarra/casa-manchoalorra/13659_casa-manchoalorra_1392808612_o.jpg",
+            "cor":"",
+            "es":"false",
+            "price":"22"
+        },
+        {
+            "id":"7",
+            "name":"Camping Bardenas",
+            "ubc":"Ctra. NA-660, km 13,4, Villafranca",
+            "desc":"a",
+            "image":"https://media3.clubrural.com/img695x521/navarra/camping-bardenas/142486_camping-bardenas_1586253384_o.jpg",
+            "cor":"",
+            "es":"false",
+            "price":"33"
+        },
+        {
+            "id":"8",
+            "name":"Lopenea",
+            "ubc":"Elbarren Kalea, 47, Leitza",
+            "desc":"a",
+            "image":"https://media3.clubrural.com/img695x521/navarra/lopenea/185387_lopenea_1486716824_o.jpg",
+            "cor":"",
+            "es":"false",
+            "price":"32"
+        },
+        {
+            "id":"9",
+            "name":"Casa Rural Elurkoia",
+            "ubc":"C/ Garagardoia, 19, Isaba",
+            "desc":"a",
+            "image":"https://media3.clubrural.com/img694x521/navarra/casa-rural-elurkoia/189273_casa-rural-elurkoia_1349969_o.jpg",
+            "cor":"",
+            "es":"false",
+            "price":"32"
+        },
+        {
+            "id":"10",
+            "name":"Bordaxuria I y II",
+            "ubc":"Caserío Casa Arburua, s/n, Zugarramurdi",
+            "desc":"a",
+            "image":"https://media3.clubrural.com/img695x521/navarra/bordaxuri-i-y-ii/173266_bordaxuri-i-y-ii_1559899222_o.jpg",
+            "cor":"",
+            "es":"false",
+            "price":"33"
         }
     ]
 }

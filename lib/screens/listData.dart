@@ -50,15 +50,15 @@ class _ListDataScreen extends State<ListDataScreen> {
                   return Card(
                     key: ValueKey(_items[index]["id"]),
                     margin: const EdgeInsets.all(10),
-                    color: Color.fromARGB(255, 210, 45, 45),
+                    color: Color.fromARGB(255, 255, 251, 251),
                     elevation: 5,
                     child: Column(
                       children: [
                         ListTile(
                           title: Text(_items[index]["name"]),
-                          subtitle: Text(_items[index]["desc"]),
+                          subtitle: Text(_items[index]["ubc"] +""+ _items[index]["desc"] + "\nPrecio/noche: " + _items[index]["price"] + "€"),
                         ),
-                        //Image.network(_items[index]["image"], scale: 3),
+                        Image.network(_items[index]["image"], scale: 2),
                         ElevatedButton(onPressed: null, child: Text("Cómo llegar")) // Este llevará a Google Maps
                       ],
                     )
@@ -71,7 +71,6 @@ class _ListDataScreen extends State<ListDataScreen> {
       ),
     );
   }
-
 
   @override
   void initState() {
