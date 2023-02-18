@@ -1,8 +1,10 @@
 import 'dart:convert';
+import 'dart:ffi';
+import 'package:appflutter/theme/app_theme.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
+import 'package:url_launcher/url_launcher.dart';
 import '../../entities/model.dart';
 
 
@@ -59,7 +61,7 @@ class _ListDataScreen extends State<ListDataScreen> {
                           subtitle: Text(_items[index]["ubc"] +""+ _items[index]["desc"] + "\nPrecio/noche: " + _items[index]["price"] + "€"),
                         ),
                         Image.network(_items[index]["image"], scale: 2),
-                        ElevatedButton(onPressed: null, child: Text("Cómo llegar")) // Este llevará a Google Maps
+                        btn(double.parse(_items[index]["cor1"]),double.parse(_items[index]["cor2"])) // Pasamos las cordenadas y devuelve el botón
                       ],
                     )
                   );
@@ -78,6 +80,21 @@ class _ListDataScreen extends State<ListDataScreen> {
     readJson();
   }
 
+  // Esta función es para utilizar Google Maps con las coordenadas
+
+  Future<void> openMap(double latitude, double longitude) async {
+     String mapUrl = '';
+     mapUrl = 'https://www.google.com/maps/dir/?api=1&destination=$latitude,$longitude&travelmode=driving';
+
+     if (await canLaunchUrl(Uri.parse(mapUrl))) {
+       await launchUrl(Uri.parse(mapUrl),mode: LaunchMode.externalApplication);
+     } else {
+       throw 'Could not open the map.';
+     }
+   }
+
+  // Función para leer el JSON
+
   Future<void> readJson() async{
     final String response = await rootBundle.loadString('assets/data.json');
     final data = await json.decode(response);
@@ -86,4 +103,18 @@ class _ListDataScreen extends State<ListDataScreen> {
       //print("${_items.length}");
     });
   }
+
+  // Botón de cómo llegar en Google Maps
+
+  TextButton btn(double latitude, double longitude){
+    return TextButton(
+            style: TextButton.styleFrom(backgroundColor: AppTheme.primary),
+            onPressed: (){
+              openMap(latitude, longitude);
+            },
+            child: Text("Como llegar", style: TextStyle(color: Colors.white),),
+          );
+  }
+
+  
 }

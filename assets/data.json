@@ -130,7 +130,8 @@
             "ubc":"Teileri Karrika, 14, 31753 Beintza-Labaien",
             "desc":"a",
             "image":"https://media3.clubrural.com/img695x521/navarra/errandonea-casa-rural/189813_errandonea-casa-rural_0005811001598712311_o.jpg",
-            "cor":"",
+            "cor1":"43.08698865387489",
+            "cor2":"-1.7496153804308296",
             "es":"false",
             "price":"21"
         },
@@ -140,7 +141,8 @@
             "ubc":"Calle San Cristóbal, 31878 Arruiz",
             "desc":"a",
             "image":"https://media3.clubrural.com/img695x521/navarra/mikelenea-_-mikelenetxik/143932_mikelenea-_-mikelenetxik_0028452001578942949_o.jpg",
-            "cor":"",
+            "cor1":"42.99439432338722",
+            "cor2":"-1.862094723925847",
             "es":"false",
             "price":"25"
         },
@@ -150,7 +152,8 @@
             "ubc":"C/Tahona, 27, 31260 Lerín",
             "desc":"a",
             "image":"https://media3.clubrural.com/img695x521/navarra/casa-rural-la-tahona/129875_casa-rural-la-tahona_0284807001606317133_o.jpg",
-            "cor":"",
+            "cor1":"42.48274170966196",
+            "cor2":"-1.9711965784057308",
             "es":"false",
             "price":"44"
         },
@@ -160,7 +163,8 @@
             "ubc":"C/Beartzun, s/n, Elizondo",
             "desc":"a",
             "image":"https://media3.clubrural.com/img695x521/navarra/casa-gamioa/125315_casa-gamioa_0940366001646813034_o.jpg",
-            "cor":"",
+            "cor1":"43.13208898949002",
+            "cor2":"-1.4683820716136173",
             "es":"false",
             "price":"32"
         },
@@ -170,7 +174,8 @@
             "ubc":"C/ Juan XXIII, 15, Cabanillas",
             "desc":"a",
             "image":"https://media3.clubrural.com/img695x521/navarra/casa-rural-oscar/135757_casa-rural-oscar_0472479001565213318_o.jpg",
-            "cor":"",
+            "cor1":"42.03118597628567",
+            "cor2":"-1.5256971971857862",
             "es":"false",
             "price":"21"
         },
@@ -180,7 +185,8 @@
             "ubc":"C/ Mantxoalorra, 1 A, Ochagavia",
             "desc":"a",
             "image":"https://media3.clubrural.com/img684x521/navarra/casa-manchoalorra/13659_casa-manchoalorra_1392808612_o.jpg",
-            "cor":"",
+            "cor1":"42.90354672860335",
+            "cor2":"-1.0901185106528921",
             "es":"false",
             "price":"22"
         },
@@ -190,7 +196,8 @@
             "ubc":"Ctra. NA-660, km 13,4, Villafranca",
             "desc":"a",
             "image":"https://media3.clubrural.com/img695x521/navarra/camping-bardenas/142486_camping-bardenas_1586253384_o.jpg",
-            "cor":"",
+            "cor1":"42.263286669245936",
+            "cor2":"-1.7392352555803137",
             "es":"false",
             "price":"33"
         },
@@ -200,7 +207,8 @@
             "ubc":"Elbarren Kalea, 47, Leitza",
             "desc":"a",
             "image":"https://media3.clubrural.com/img695x521/navarra/lopenea/185387_lopenea_1486716824_o.jpg",
-            "cor":"",
+            "cor1":"43.080597508561084",
+            "cor2":"-1.9152713369619478",
             "es":"false",
             "price":"32"
         },
@@ -210,7 +218,8 @@
             "ubc":"C/ Garagardoia, 19, Isaba",
             "desc":"a",
             "image":"https://media3.clubrural.com/img694x521/navarra/casa-rural-elurkoia/189273_casa-rural-elurkoia_1349969_o.jpg",
-            "cor":"",
+            "cor1":"42.8615344942158",
+            "cor2":"-0.9231298731875717",
             "es":"false",
             "price":"32"
         },
@@ -220,9 +229,20 @@
             "ubc":"Caserío Casa Arburua, s/n, Zugarramurdi",
             "desc":"a",
             "image":"https://media3.clubrural.com/img695x521/navarra/bordaxuri-i-y-ii/173266_bordaxuri-i-y-ii_1559899222_o.jpg",
-            "cor":"",
+            "cor1":"43.26168818347784",
+            "cor2":"-1.5247058512508174",
             "es":"false",
             "price":"33"
+        }
+    ],
+    "museos":[
+        {
+            "id":"1",
+            "name":"Elizondo",
+            "desc":"Para los que no lo sepan, el valle de Baztan es un único municipio formado por 15 pueblos. Su paisaje y su paisanaje han sido inspiración para la grabación de muchas películas y la escritura de novelas como La trilogía del Baztán, de Dolores Redondo.",
+            "image":"https://www.guiarepsol.com/content/dam/repsol-guia/contenidos-imagenes/viajar/vamos-de-excursion/pueblos-bonitos-navarra/gr-cms-media-featured_images-none-8f79673a-f7a2-488b-b193-357dfc1c4588-thumbnails-valle-de-baztan_alkaxuri_turismo-de-navarra-jpg-0x740_q100.jpg.transform/rp-rendition-lg/image.jpg",
+            "cor":"",
+            "es":"true"
         }
     ]
 }

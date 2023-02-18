@@ -40,29 +40,32 @@ class _ConfigScreenState extends State<ConfigScreen> {
             ),
             Divider(height: 20, thickness: 1,),
             SizedBox(height: 10,),
-            Row(
-              children: [
-                SizedBox(width: 80,),
-                Text("Oscuro",style: TextStyle(fontSize: 20,),),
-                SizedBox(width: 250,),
-                Switch(
-                  value: isSwitched, 
-                  onChanged: (value){
-                    setState(() {
-                      isSwitched = value;
-                      if (isSwitched == true) {
-                        AppTheme.setOsc(true);
-                      }
-                    });
-                  })
-              ],
+            Container(
+              padding: EdgeInsets.only(right: 60),
+              child: Row(
+                children: [
+                  SizedBox(width: 80,),
+                  Text("Oscuro",style: TextStyle(fontSize: 20,),),
+                  SizedBox(width: 70,),
+                  Switch(
+                    value: isSwitched, 
+                    onChanged: (value){
+                      setState(() {
+                        isSwitched = value;
+                        if (isSwitched == true) {
+                          AppTheme.setOsc(true);
+                        }
+                      });
+                    })
+                ],
+              ),
             ),
             SizedBox(height: 10,),
             Row(
               children: [
                 SizedBox(width: 80,),
                 Text("Color",style: TextStyle(fontSize: 20,),),
-                SizedBox(width: 250,),
+                SizedBox(width: 70,),
                 Switch(value: false, onChanged: null)
               ],
             ),
@@ -93,8 +96,8 @@ class _ConfigScreenState extends State<ConfigScreen> {
                 TableRow(
                   children: [
                     //SizedBox(width: 1,),
-                    TableCell(child: Padding(padding: EdgeInsets.only(bottom: 40), child: Text("1.0"),)),
-                    TableCell(child: Text(DateTime.now().day.toString() + "/" + DateTime.now().month.toString() + "/" + DateTime.now().year.toString())),
+                    TableCell(child: Padding(padding: EdgeInsets.only(bottom: 40), child: Text("1.0", style: TextStyle(fontSize: 12)),)),
+                    TableCell(child: Text(DateTime.now().day.toString() + "/" + DateTime.now().month.toString() + "/" + DateTime.now().year.toString(), style: TextStyle(fontSize: 12))),
                   ]
                 ),
                 
@@ -107,8 +110,8 @@ class _ConfigScreenState extends State<ConfigScreen> {
 
                 TableRow(
                   children: [
-                    TableCell(child: Text("guillepolanruiz@gmail.com")),
-                    TableCell(child: Text("Guillermo Polán Ruiz")),
+                    TableCell(child: Text("guillepolanruiz@gmail.com", style: TextStyle(fontSize: 12))),
+                    TableCell(child: Text("Guillermo Polán Ruiz", style: TextStyle(fontSize: 12))),
                   ]
                 )
               ],
@@ -122,6 +125,6 @@ class _ConfigScreenState extends State<ConfigScreen> {
 
 
   Text getText(String text){
-    return Text(text, style: TextStyle(fontSize: 20));
+    return Text(text, style: TextStyle(fontSize: 15));
   }
 }

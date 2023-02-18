@@ -30,6 +30,7 @@ class _ListScreen extends State<ListScreen> {
             ListClass(link: ListDataScreen(name: 'lugares', text: 'Lugares',), text: "Lugares", icon: Icons.place),
             ListClass(link: ListDataScreen(name: 'pueblos', text: 'Pueblos',), text: "Pueblos", icon: Icons.location_city),
             ListClass(link: ListDataScreen(name: 'casasRurales', text: 'Casas Rurales',), text: "Casas Rurales", icon: Icons.villa_rounded),
+            ListClass(link: ListDataScreen(name: 'museos', text: 'Museos'), text: 'Museos', icon: Icons.museum_rounded)
           ],
          ),
       ),
