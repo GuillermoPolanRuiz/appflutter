@@ -44,7 +44,7 @@ class _ListDataScreen extends State<ListDataScreen> {
                           subtitle: Text(_items[index]["desc"]),
                         ),
                         Image.network(_items[index]["image"], scale: 3),
-                        ElevatedButton(onPressed: null, child: Text("Cómo llegar")) // Este llevará a Google Maps
+                        btn(double.parse(_items[index]["cor1"]),double.parse(_items[index]["cor2"])) // Pasamos las cordenadas y devuelve el botón
                       ],
                     )
                   );
