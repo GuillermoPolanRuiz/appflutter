@@ -1,3 +1,4 @@
+import 'package:appflutter/screens/networkConnectivity.dart';
 import 'package:appflutter/screens/open.dart';
 import 'package:flutter/material.dart';
 import 'package:appflutter/theme/app_theme.dart';
@@ -16,7 +17,8 @@ class MyApp extends StatelessWidget {
       title: 'SearchNA',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.mainTheme,
-      home: const ScrollScreen()
+      // home: const ScrollScreen()
+      home: ConnectionCheckerDemo(), // Comprobar si tiene conexión a Internet
     );
   }
 }

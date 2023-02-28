@@ -40,7 +40,7 @@ class _ListDataScreen extends State<ListDataScreen> {
                     child: Column(
                       children: [
                         ListTile(
-                          title: Text(_items[index]["name"]),
+                          title: Row(children: [Text(_items[index]["name"]), Expanded(child: Column()),Icon(Icons.favorite_border_outlined)],),
                           subtitle: Text(_items[index]["desc"]),
                         ),
                         Image.network(_items[index]["image"], scale: 3),
@@ -57,7 +57,7 @@ class _ListDataScreen extends State<ListDataScreen> {
                     child: Column(
                       children: [
                         ListTile(
-                          title: Text(_items[index]["name"]),
+                          title: Row(children: [Text(_items[index]["name"]), Expanded(child: Column()),Icon(Icons.favorite_border_outlined)],),
                           subtitle: Text(_items[index]["ubc"] +""+ _items[index]["desc"] + "\nPrecio/noche: " + _items[index]["price"] + "€"),
                         ),
                         Image.network(_items[index]["image"], scale: 2),
