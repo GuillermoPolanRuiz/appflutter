@@ -26,13 +26,15 @@ class _ListScreen extends State<ListScreen> {
       ),
       body: Center(
          child: ListView(
-          children: const [
-            ListClass(link: ListDataScreen(name: 'lugares', text: 'Lugares',), text: "Lugares", icon: Icons.place),
-            ListClass(link: ListDataScreen(name: 'pueblos', text: 'Pueblos',), text: "Pueblos", icon: Icons.location_city),
-            ListClass(link: ListDataScreen(name: 'casasRurales', text: 'Casas Rurales',), text: "Casas Rurales", icon: Icons.villa_rounded),
-            ListClass(link: ListDataScreen(name: 'museos', text: 'Museos'), text: 'Museos', icon: Icons.museum_rounded),
+          children: [
+            MyContainer(link: ListDataScreen(name: 'lugares', text: 'Lugares',), text: "Lugares", icon: Icons.place),
+            MyContainer(link: ListDataScreen(name: 'pueblos', text: 'Pueblos',), text: "Pueblos", icon: Icons.location_city),
+            MyContainer(link: ListDataScreen(name: 'casasRurales', text: 'Casas Rurales',), text: "Casas Rurales", icon: Icons.villa_rounded),
+            MyContainer(link: ListDataScreen(name: 'museos', text: 'Museos'), text: 'Museos', icon: Icons.museum_rounded),
+            
             
             // Favoritos
+            MyContainer(link: ListDataScreen(name: 'museos', text: 'Favoritos'), text: 'Favoritos', icon: Icons.favorite),
 
           ],
          ),
@@ -44,17 +46,34 @@ class _ListScreen extends State<ListScreen> {
 
 
 // Clase para generar un ListTile con el link a la Screen, texto e icono
-class ListClass extends StatelessWidget {
+class MyContainer extends StatelessWidget {
   final Widget link;
   final String text;
   final IconData icon;
-  const ListClass({
+  const MyContainer({
     Key? key, required this.link, required this.text, required this.icon
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(
+    return Container(
+      margin: EdgeInsets.only(top: 20, left: 30, right: 30),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.only(topLeft: Radius.circular(20), topRight: Radius.circular(20), bottomRight: Radius.circular(20)),
+        border: Border.all(
+          color: AppTheme.primary.withOpacity(0.001),
+          width: 4,
+        ),
+        boxShadow: [
+          BoxShadow(
+            color: Color.fromRGBO(194, 194, 194, 1),
+            spreadRadius: 1,
+            blurRadius: 2
+          )
+        ]
+      ),
+      child: ListTile(
       leading: Icon(
         icon,
         size: 30,
@@ -67,7 +86,7 @@ class ListClass extends StatelessWidget {
         ),
       ),
       
-      trailing: const Icon(Icons.navigate_next),
+      trailing: Icon(Icons.navigate_next,size: 30,),
       onTap: () => {
         Navigator.push(
           context,
@@ -77,6 +96,7 @@ class ListClass extends StatelessWidget {
         )
       }
 
+    ),
     );
   }
 }

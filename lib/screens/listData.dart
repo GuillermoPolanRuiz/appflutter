@@ -34,13 +34,18 @@ class _ListDataScreen extends State<ListDataScreen> {
                 if (_items[index]["es"] == "true") { // Este if va ser para saber si es casa rural o lugar, pueblo...
                   return Card(
                     key: ValueKey(_items[index]["id"]),
-                    margin: const EdgeInsets.all(10),
+                    margin: const EdgeInsets.all(30),
                     color: Color.fromARGB(255, 255, 251, 251),
                     elevation: 5,
                     child: Column(
                       children: [
                         ListTile(
-                          title: Row(children: [Text(_items[index]["name"]), Expanded(child: Column()),Icon(Icons.favorite_border_outlined)],),
+                          title: Row(children: [Text(
+                              _items[index]["name"],
+                              style: TextStyle(
+                                fontSize: 20,
+                              ),
+                            ), Expanded(child: Column()),Icon(Icons.favorite_border_outlined), Container(margin: EdgeInsets.only(bottom: 30),)],),
                           subtitle: Text(_items[index]["desc"]),
                         ),
                         Image.network(_items[index]["image"], scale: 3),
@@ -51,13 +56,17 @@ class _ListDataScreen extends State<ListDataScreen> {
                 }else{
                   return Card(
                     key: ValueKey(_items[index]["id"]),
-                    margin: const EdgeInsets.all(10),
+                    margin: const EdgeInsets.all(30),
                     color: Color.fromARGB(255, 255, 251, 251),
                     elevation: 5,
                     child: Column(
                       children: [
                         ListTile(
-                          title: Row(children: [Text(_items[index]["name"]), Expanded(child: Column()),Icon(Icons.favorite_border_outlined)],),
+                          title: Row(children: [Text(_items[index]["name"],
+                          style: TextStyle(
+                                fontSize: 20,
+                              ),
+                          ), Expanded(child: Column()),Icon(Icons.favorite_border_outlined), Container(margin: EdgeInsets.only(bottom: 30),)],),
                           subtitle: Text(_items[index]["ubc"] +""+ _items[index]["desc"] + "\nPrecio/noche: " + _items[index]["price"] + "€"),
                         ),
                         Image.network(_items[index]["image"], scale: 2),
@@ -112,7 +121,7 @@ class _ListDataScreen extends State<ListDataScreen> {
             onPressed: (){
               openMap(latitude, longitude);
             },
-            child: Text("Como llegar", style: TextStyle(color: Colors.white),),
+            child: Text("Cómo llegar", style: TextStyle(color: Colors.white),),
           );
   }
 
