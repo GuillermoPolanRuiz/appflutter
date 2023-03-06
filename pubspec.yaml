@@ -41,6 +41,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   path_provider:  ^2.0.12
   sqflite: ^2.2.5
+  like_button: ^2.0.4
 
 dev_dependencies:
   flutter_test:

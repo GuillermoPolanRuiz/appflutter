@@ -4,6 +4,7 @@ import 'package:appflutter/theme/app_theme.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:like_button/like_button.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../../entities/model.dart';
 
@@ -45,7 +46,7 @@ class _ListDataScreen extends State<ListDataScreen> {
                               style: TextStyle(
                                 fontSize: 20,
                               ),
-                            ), Expanded(child: Column()),Icon(Icons.favorite_border_outlined), Container(margin: EdgeInsets.only(bottom: 30),)],),
+                            ), Expanded(child: Column()),likeBtn(), Container(margin: EdgeInsets.only(bottom: 30),)],),
                           subtitle: Text(_items[index]["desc"]),
                         ),
                         Image.network(_items[index]["image"], scale: 3),
@@ -66,7 +67,7 @@ class _ListDataScreen extends State<ListDataScreen> {
                           style: TextStyle(
                                 fontSize: 20,
                               ),
-                          ), Expanded(child: Column()),Icon(Icons.favorite_border_outlined), Container(margin: EdgeInsets.only(bottom: 30),)],),
+                          ), Expanded(child: Column()),likeBtn(), Container(margin: EdgeInsets.only(bottom: 30),)],),
                           subtitle: Text(_items[index]["ubc"] +""+ _items[index]["desc"] + "\nPrecio/noche: " + _items[index]["price"] + "€"),
                         ),
                         Image.network(_items[index]["image"], scale: 2),
@@ -80,6 +81,17 @@ class _ListDataScreen extends State<ListDataScreen> {
           ):Container()
         ],
       ),
+    );
+  }
+
+  LikeButton likeBtn(){
+    return LikeButton(
+      animationDuration: Duration(milliseconds: 1000),
+      likeBuilder: (isLiked) {
+
+        // Leer y escribir si es favorito en un json
+
+      },
     );
   }
 
