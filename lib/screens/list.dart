@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:appflutter/screens/listData.dart';
+import 'package:appflutter/screens/listDataFav.dart';
 import 'package:appflutter/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:appflutter/entities/model.dart';
@@ -34,7 +35,7 @@ class _ListScreen extends State<ListScreen> {
             
             
             // Favoritos
-            MyContainer(link: ListDataScreen(name: 'museos', text: 'Favoritos'), text: 'Favoritos', icon: Icons.favorite),
+            MyContainer(link: ListDataFav(), text: 'Favoritos', icon: Icons.favorite),
 
           ],
          ),
