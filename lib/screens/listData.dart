@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'dart:ffi';
+import 'package:appflutter/entities/database.dart';
 import 'package:appflutter/theme/app_theme.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -7,6 +8,7 @@ import 'package:flutter/services.dart';
 import 'package:like_button/like_button.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../../entities/model.dart';
+import '../entities/database.dart';
 
 
 class ListDataScreen extends StatefulWidget{
@@ -19,6 +21,7 @@ class ListDataScreen extends StatefulWidget{
 }
 
 class _ListDataScreen extends State<ListDataScreen> {
+  final DatabaseService _db = DatabaseService();
   List _items = [];
   @override
   Widget build(BuildContext context) {
@@ -46,7 +49,15 @@ class _ListDataScreen extends State<ListDataScreen> {
                               style: TextStyle(
                                 fontSize: 20,
                               ),
-                            ), Expanded(child: Column()),likeBtn(), Container(margin: EdgeInsets.only(bottom: 30),)],),
+                            ), Expanded(child: Column()),likeBtn(
+                              _items[index]["id"],
+                              _items[index]["name"],
+                              _items[index]["desc"],
+                              _items[index]["image"],
+                              _items[index]["cor1"],
+                              _items[index]["cor2"],
+                              _items[index]["es"]
+                            ), Container(margin: EdgeInsets.only(bottom: 30),)],),
                           subtitle: Text(_items[index]["desc"]),
                         ),
                         Image.network(_items[index]["image"], scale: 3),
@@ -67,7 +78,15 @@ class _ListDataScreen extends State<ListDataScreen> {
                           style: TextStyle(
                                 fontSize: 20,
                               ),
-                          ), Expanded(child: Column()),likeBtn(), Container(margin: EdgeInsets.only(bottom: 30),)],),
+                          ), Expanded(child: Column()),likeBtn(
+                            _items[index]["id"],
+                              _items[index]["name"].toString(),
+                              _items[index]["desc"].toString(),
+                              _items[index]["image"].toString(),
+                              _items[index]["cor1"].toString(),
+                              _items[index]["cor2"].toString(),
+                              _items[index]["es"].toString()
+                          ), Container(margin: EdgeInsets.only(bottom: 30),)],),
                           subtitle: Text(_items[index]["ubc"] +""+ _items[index]["desc"] + "\nPrecio/noche: " + _items[index]["price"] + "€"),
                         ),
                         Image.network(_items[index]["image"], scale: 2),
@@ -83,13 +102,20 @@ class _ListDataScreen extends State<ListDataScreen> {
       ),
     );
   }
+  
 
-  LikeButton likeBtn(){
+  LikeButton likeBtn(id,name,desc,image,cor1,cor2,es){
     return LikeButton(
       animationDuration: Duration(milliseconds: 1000),
       likeBuilder: (isLiked) {
 
-        // Leer y escribir si es favorito en un json
+        if (isLiked == true) {
+          // Leer y escribir si es favorito en un json 
+          Dog dog = new Dog(id:int.parse(id), name: name, desc: desc, image: image, cor1: cor1, cor2: cor2, es: es);
+          _db.insertDog(dog);
+          print(_db.dogs());
+        }
+        
 
       },
     );

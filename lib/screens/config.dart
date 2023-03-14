@@ -12,9 +12,6 @@ class ConfigScreen extends StatefulWidget {
 }
 
 
-//
-//  ESTA CLASE SE ME DESAJUSTA EN MI MOVIL!!!!!!!
-//
 class _ConfigScreenState extends State<ConfigScreen> {
 
 
@@ -30,45 +27,6 @@ class _ConfigScreenState extends State<ConfigScreen> {
         padding: const EdgeInsets.all(10),
         child: ListView(
           children: [
-            SizedBox(height: 40,),
-            Row(
-              children: [
-                Icon(Icons.settings),
-                SizedBox(width: 10,),
-                Text("Tema", style: TextStyle(fontSize: 22,),)
-              ],
-            ),
-            Divider(height: 20, thickness: 1,),
-            SizedBox(height: 10,),
-            Container(
-              padding: EdgeInsets.only(right: 60),
-              child: Row(
-                children: [
-                  SizedBox(width: 80,),
-                  Text("Oscuro",style: TextStyle(fontSize: 20,),),
-                  SizedBox(width: 70,),
-                  Switch(
-                    value: isSwitched, 
-                    onChanged: (value){
-                      setState(() {
-                        isSwitched = value;
-                        if (isSwitched == true) {
-                          AppTheme.setOsc(true);
-                        }
-                      });
-                    })
-                ],
-              ),
-            ),
-            SizedBox(height: 10,),
-            Row(
-              children: [
-                SizedBox(width: 80,),
-                Text("Color",style: TextStyle(fontSize: 20,),),
-                SizedBox(width: 70,),
-                Switch(value: false, onChanged: null)
-              ],
-            ),
             SizedBox(height: 20,),
             Row(
               children: [
