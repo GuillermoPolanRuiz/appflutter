@@ -39,7 +39,7 @@ class DatabaseService {
   Future<void> _onCreate(Database db, int version) async {
     // Run the CREATE {dogs} TABLE statement on the database.
     await db.execute(
-      'CREATE TABLE dogs2(id INTEGER PRIMARY KEY, name TEXT, desc TEXT, image TEXT, cor1 TEXT, cor2 TEXT, es TEXT',
+      '''CREATE TABLE IF NOT EXISTS dogs(id INTEGER PRIMARY KEY, name TEXT NOT NULL, desc TEXT NOT NULL, image TEXT NOT NULL, cor1 TEXT NOT NULL, cor2 TEXT NOT NULL, es TEXT NOT NULL)''',
     );
   }
 
@@ -47,7 +47,7 @@ class DatabaseService {
   Future<void> insertDog(Dog dog) async {
     final db = await _databaseService.database;
     await db.insert(
-      'dogs2',
+      'dogs',
       dog.toMap(),
       conflictAlgorithm: ConflictAlgorithm.replace,
     );
@@ -56,19 +56,19 @@ class DatabaseService {
 
   Future<List<Dog>> dogs() async {
     final db = await _databaseService.database;
-    final List<Map<String, dynamic>> maps = await db.query('dogs2');
+    final List<Map<String, dynamic>> maps = await db.query('dogs');
     return List.generate(maps.length, (index) => Dog.fromMap(maps[index]));
   }
 
 
   Future<void> updateDog(Dog dog) async {
     final db = await _databaseService.database;
-    await db.update('dogs2', dog.toMap(), where: 'id = ?', whereArgs: [dog.id]);
+    await db.update('dogs', dog.toMap(), where: 'id = ?', whereArgs: [dog.id]);
   }
 
 
   Future<void> deleteDog(int id) async {
     final db = await _databaseService.database;
-    await db.delete('dogs2', where: 'id = ?', whereArgs: [id]);
+    await db.delete('dogs', where: 'id = ?', whereArgs: [id]);
   }
 }
