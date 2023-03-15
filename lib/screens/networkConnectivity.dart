@@ -50,7 +50,7 @@ class _ConnectionCheckerDemoState extends State<ConnectionCheckerDemo> {
   @override
   Widget build(BuildContext context) {
     if (string == "Mobile: Online") {
-      return OpenScreen();
+      return ScrollScreen();
     }else{
       return Scaffold(
       appBar: AppBar(
