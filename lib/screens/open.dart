@@ -24,18 +24,16 @@ class _OpenScreenState extends State<OpenScreen> {
               // Texto superior
               Expanded(child: Column(
                 children: [
-                  Container(padding: const EdgeInsets.all(40),),
-                  Text('\n__________________________'),
+                  Container(padding: const EdgeInsets.all(60),),
                   Text(
                     'TurisNA',
                     style: TextStyle(
-                      fontSize: 35 ,
+                      fontSize: 50 ,
                       color: AppTheme.primary,
                       fontWeight: FontWeight.bold,
                     ),
                     textAlign: TextAlign.center,
                   ),
-                  Text('__________________________'),
                 ],
               )),
 
