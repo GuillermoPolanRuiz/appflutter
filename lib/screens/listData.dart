@@ -58,7 +58,8 @@ class _ListDataScreen extends State<ListDataScreen> {
                               _items[index]["image"],
                               _items[index]["cor1"],
                               _items[index]["cor2"],
-                              _items[index]["es"]
+                              _items[index]["es"],
+                              "",""
                             ), 
                             Container(margin: EdgeInsets.only(bottom: 30),)],),
                           subtitle: Text(_items[index]["desc"]),
@@ -88,7 +89,9 @@ class _ListDataScreen extends State<ListDataScreen> {
                               _items[index]["image"].toString(),
                               _items[index]["cor1"].toString(),
                               _items[index]["cor2"].toString(),
-                              _items[index]["es"].toString()
+                              _items[index]["es"].toString(),
+                              _items[index]["price"].toString(),
+                              _items[index]["ubc"].toString()
                           ), Container(margin: EdgeInsets.only(bottom: 30),)],),
                           subtitle: Text(_items[index]["ubc"] +""+ _items[index]["desc"] + "\nPrecio/noche: " + _items[index]["price"] + "€"),
                         ),
@@ -106,32 +109,12 @@ class _ListDataScreen extends State<ListDataScreen> {
     );
   }
 
-  void allDogs(){
-    Scaffold(
-      body: FutureBuilder<List<Dog>>(
-      future: _db.dogs(),
-      builder: (context, snapshot) {
-        if (snapshot.connectionState == ConnectionState.waiting) {
-          return Center(
-            child: CircularProgressIndicator(),
-          );
-        }
-        return Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 8.0),
-          child: ListView.builder(
-            itemCount: snapshot.data!.length,
-            itemBuilder: (context, index) {
-              final dog = snapshot.data![index];
-              _itemsFav.add(dog);
-              return Card(
-                child: Text(dog.name),
-              );
-            },
-          ),
-        );
-      },
-    )
-    );
+  List<Dog> getAll() {
+    List<Dog> _listProducts = [];
+    _db.dogs().then((value) {
+      if (value != null) value.forEach((item) => _listProducts.add(item));
+    });
+    return _listProducts == null ? [] : _listProducts;
   }
   
   bool verifyID(id){
@@ -144,8 +127,8 @@ class _ListDataScreen extends State<ListDataScreen> {
   }
   
 
-  LikeButton likeBtn(id,name,desc,image,cor1,cor2,es){
-    if (verifyID(id)) {
+  LikeButton likeBtn(id,name,desc,image,cor1,cor2,es,price,ubc){
+    if (verifyID(int.parse(id))) {
       return LikeButton(
       animationDuration: Duration(milliseconds: 1000),
       isLiked: true,
@@ -156,7 +139,7 @@ class _ListDataScreen extends State<ListDataScreen> {
       likeBuilder: (isLiked) {
         if (isLiked == true) {
           // Leer y escribir si es favorito en un json 
-          Dog dog = new Dog(id:int.parse(id), name: name, desc: desc, image: image, cor1: cor1, cor2: cor2, es: es);
+          Dog dog = new Dog(id:int.parse(id), name: name, desc: desc, image: image, cor1: cor1, cor2: cor2, es: es, price: price, ubc: ubc);
           _db.insertDog(dog);
         }
       },
@@ -168,8 +151,9 @@ class _ListDataScreen extends State<ListDataScreen> {
   void initState() {
     super.initState();
     readJson();
-    allDogs();
+    _itemsFav = getAll();
   }
+  
 
   // Esta función es para utilizar Google Maps con las coordenadas
 

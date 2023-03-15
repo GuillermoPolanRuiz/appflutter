@@ -39,7 +39,7 @@ class DatabaseService {
   Future<void> _onCreate(Database db, int version) async {
     // Run the CREATE {dogs} TABLE statement on the database.
     await db.execute(
-      '''CREATE TABLE IF NOT EXISTS dogs(id INTEGER PRIMARY KEY, name TEXT NOT NULL, desc TEXT NOT NULL, image TEXT NOT NULL, cor1 TEXT NOT NULL, cor2 TEXT NOT NULL, es TEXT NOT NULL)''',
+      '''CREATE TABLE dogs(id INTEGER PRIMARY KEY, name TEXT NOT NULL, desc TEXT NOT NULL, image TEXT NOT NULL, cor1 TEXT NOT NULL, cor2 TEXT NOT NULL, es TEXT NOT NULL, price TEXT, ubc TEXT)''',
     );
   }
 

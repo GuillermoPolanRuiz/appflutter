@@ -10,6 +10,8 @@ class Dog {
   final String cor1;
   final String cor2;
   final String es;
+  final String? price;
+  final String? ubc;
 
   Dog({
     required this.id,
@@ -18,7 +20,9 @@ class Dog {
     required this.image,
     required this.cor1,
     required this.cor2,
-    required this.es
+    required this.es,
+    this.price,
+    this.ubc
   });
 
   // Convert a Dog into a Map. The keys must correspond to the names of the
@@ -31,7 +35,9 @@ class Dog {
       'image': image,
       'cor1': cor1,
       'cor2': cor2,
-      'es': es
+      'es': es,
+      'price':price,
+      'ubc':ubc
     };
   }
 
@@ -43,7 +49,9 @@ class Dog {
       image: map['image'] ?? '',
       cor1: map['cor1'] ?? '',
       cor2: map['cor2'] ?? '',
-      es: map['es'] ?? ''
+      es: map['es'] ?? '',
+      price: map['price'] ?? '',
+      ubc: map['ubc'] ?? ''
     );
   }
 
@@ -55,6 +63,6 @@ class Dog {
   // each dog when using the print statement.
   @override
   String toString() {
-    return 'Dog(id: $id, name: $name, desc: $desc, image: $image, cor1: $cor1, cor2: $cor2, es: $es)';
+    return 'Dog(id: $id, name: $name, desc: $desc, image: $image, cor1: $cor1, cor2: $cor2, es: $es, price: $price, ubc: $ubc)';
   }
 }

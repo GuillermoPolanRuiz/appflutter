@@ -48,7 +48,7 @@
   ],
   "pueblos":[
     {
-        "id":"1",
+        "id":"6",
         "name":"Ochagavía",
         "desc":"Si arrancamos por el norte, muy cerca de Francia, nos encontramos con Salazar, un valle central del Pirineo navarro.",
         "image":"https://www.guiarepsol.com/content/dam/repsol-guia/contenidos-imagenes/viajar/vamos-de-excursion/pueblos-bonitos-navarra/gr-cms-media-featured_images-none-feb011b2-5250-4859-ac78-8323685997f2-04rio-ochagavia.jpg.transform/rp-rendition-lg/image.jpg",
@@ -57,7 +57,7 @@
         "es":"true"
     },
     {
-        "id":"2",
+        "id":"7",
         "name":"Isaba",
         "desc":"A 30 minutos de Ochagavía en coche aparece otro pueblito: Isaba. Se ubica en el Valle del Roncal y cumple con la estética de construcciones de madera y piedra repartidas por estrechas y empedradas callejuelas.",
         "image":"https://www.guiarepsol.com/content/dam/repsol-guia/contenidos-imagenes/viajar/vamos-de-excursion/pueblos-bonitos-navarra/gr-cms-media-featured_images-none-145d31da-2c92-4b17-9d40-3fae2868ed97-quesos-roncal-isaba-87.jpg.transform/rp-rendition-lg/image.jpg",
@@ -66,7 +66,7 @@
         "es":"true"
     },
     {
-        "id":"3",
+        "id":"8",
         "name":"Etxalar",
         "desc":"Entre montañas suaves y prados verdes, y bañada por las aguas del río Tximista, dormita otra perla del turismo rural en Navarra. Etxalar es otra postal de la vida campestre de apenas 828 habitantes, pero que se ha mantenido pese a la despoblación general en favor de las ciudades.",
         "image":"https://www.guiarepsol.com/content/dam/repsol-guia/contenidos-imagenes/viajar/vamos-de-excursion/pueblos-bonitos-navarra/gr-cms-media-featured_images-none-cb0b79f0-bdb2-4d67-8a60-ba972458f33e-etxalar_javier-campos_turismo-de-navarra.jpg.transform/rp-rendition-lg/image.jpg",
@@ -75,7 +75,7 @@
         "es":"true"
     },
     {
-        "id":"4",
+        "id":"9",
         "name":"Elizondo",
         "desc":"Para los que no lo sepan, el valle de Baztan es un único municipio formado por 15 pueblos. Su paisaje y su paisanaje han sido inspiración para la grabación de muchas películas y la escritura de novelas como La trilogía del Baztán, de Dolores Redondo.",
         "image":"https://www.guiarepsol.com/content/dam/repsol-guia/contenidos-imagenes/viajar/vamos-de-excursion/pueblos-bonitos-navarra/gr-cms-media-featured_images-none-8f79673a-f7a2-488b-b193-357dfc1c4588-thumbnails-valle-de-baztan_alkaxuri_turismo-de-navarra-jpg-0x740_q100.jpg.transform/rp-rendition-lg/image.jpg",
@@ -84,7 +84,7 @@
         "es":"true"
     },
     {
-        "id":"5",
+        "id":"10",
         "name":"Ujué",
         "desc":"Este pueblo alardea de unas vistas infinitas. Se trata de una villa medieval de 171 habitantes ubicada a 53 kilómetros de Pamplona.",
         "image":"https://www.guiarepsol.com/content/dam/repsol-guia/contenidos-imagenes/viajar/vamos-de-excursion/pueblos-bonitos-navarra/gr-cms-media-featured_images-none-d4007bd9-335e-4db1-831b-819e99921d3d-batch2_ujue-55.jpg.transform/rp-rendition-lg/image.jpg",
@@ -93,7 +93,7 @@
         "es":"true"
     },
     {
-        "id":"6",
+        "id":"11",
         "name":"Zugarramurdi",
         "desc":"Merece la pena ver el Palacio Dutaria, la Iglesia de Nuestra Asunción, la Casa Consistorial... y, sobre todo, la Cueva de Zugarramurdi, donde por lo visto tenían lugar celebraciones paganas.",
         "image":"https://www.guiarepsol.com/content/dam/repsol-guia/contenidos-imagenes/viajar/vamos-de-excursion/pueblos-bonitos-navarra/gr-cms-media-featured_images-none-b566cd4b-0328-4b02-b792-ac6c61570280-batch_zugarramurdi-6.jpg.transform/rp-rendition-lg/image.jpg",
@@ -102,7 +102,7 @@
         "es":"true"
     },
     {
-        "id":"7",
+        "id":"12",
         "name":"Lesaka",
         "desc":"Este pueblo puede que suene familiar gracias a la fama de la tortilla de patatas que cocinaba Josefina Sagardia en el restaurante ‘Kasino Lesaka’ (Recomendado por Guía Repsol). Su receta, sin darle la vuelta y doblando la mezcla como si fuera una enorme tortilla francesa, marcó un estilo que hoy se imita de norte a sur.",
         "image":"https://www.guiarepsol.com/content/dam/repsol-guia/contenidos-imagenes/viajar/vamos-de-excursion/pueblos-bonitos-navarra/gr-cms-media-featured_images-none-11ac9a99-9a13-4327-be80-75761c0c0faa-lesaka_javier-campos_turismo-de-navarra.jpg.transform/rp-rendition-lg/image.jpg",
@@ -111,7 +111,7 @@
         "es":"true"
     },
     {
-        "id":"8",
+        "id":"13",
         "name":"Olite",
         "desc":"Es probable que esta localidad ofrezca lo más parecido a transportarse a la Edad Media. Tal es la conservación de su patrimonio arquitectónico que Olite y su castillo son un reclamo turístico de primer orden.",
         "image":"https://www.guiarepsol.com/content/dam/repsol-guia/contenidos-imagenes/viajar/vamos-de-excursion/pueblos-bonitos-navarra/gr-cms-media-featured_images-portada_olite.jpg.transform/rp-rendition-lg/image.jpg",
@@ -120,7 +120,7 @@
         "es":"true"
     },
     {
-        "id":"9",
+        "id":"14",
         "name":"Artajona",
         "desc":"Y sin salir del medievo llegamos a Artajona, que desde la lejanía se distingue por el perfil impotente de El Cerco, un conjunto amurallado medieval del siglo XI. Nada menos que nueve torreones almenados y coronados por la iglesia-fortaleza de San Saturnino, del siglo XIII, declarada Monumento Histórico Artístico.",
         "image":"https://www.guiarepsol.com/content/dam/repsol-guia/contenidos-imagenes/viajar/vamos-de-excursion/pueblos-bonitos-navarra/gr-cms-media-featured_images-none-8e7ac17f-9c4b-41e7-8dd5-e07327c04c5d-artajona_francis-vaquero_turismo-de-navarra.jpg.transform/rp-rendition-lg/image.jpg",
@@ -129,7 +129,7 @@
         "es":"true"
     },
     {
-        "id":"10",
+        "id":"15",
         "name":"Puente la Reina",
         "desc":"Desde la carretera, a 23 kilómetros de Pamplona, se ve deslumbrante el puente románico sobre el río Arga, que inspira el nombre de este pueblo. También se conoce como cruce de caminos, pues lo atraviesan las dos principales vías del Camino de Santiago.",
         "image":"https://www.guiarepsol.com/content/dam/repsol-guia/contenidos-imagenes/viajar/vamos-de-excursion/pueblos-bonitos-navarra/gr-cms-media-featured_images-none-08192883-dd61-43a7-82da-58a1cfbe4a0d-puentedelareina.jpg.transform/rp-rendition-lg/image.jpg",
@@ -140,7 +140,7 @@
     ],
     "casasRurales":[
         {
-            "id":"1",
+            "id":"16",
             "name":"Errandonea Casa Rural",
             "ubc":"Teileri Karrika, 14, 31753 Beintza-Labaien",
             "desc":"a",
@@ -151,7 +151,7 @@
             "price":"21"
         },
         {
-            "id":"2",
+            "id":"17",
             "name":"Mikelenetxiki y Mikelenea",
             "ubc":"Calle San Cristóbal, 31878 Arruiz",
             "desc":"a",
@@ -162,7 +162,7 @@
             "price":"25"
         },
         {
-            "id":"3",
+            "id":"18",
             "name":"Casa Rural La Tahona",
             "ubc":"C/Tahona, 27, 31260 Lerín",
             "desc":"a",
@@ -173,7 +173,7 @@
             "price":"44"
         },
         {
-            "id":"4",
+            "id":"19",
             "name":"Casa Gamioa",
             "ubc":"C/Beartzun, s/n, Elizondo",
             "desc":"a",
@@ -184,7 +184,7 @@
             "price":"32"
         },
         {
-            "id":"5",
+            "id":"20",
             "name":"Casa Rural Oscar",
             "ubc":"C/ Juan XXIII, 15, Cabanillas",
             "desc":"a",
@@ -195,7 +195,7 @@
             "price":"21"
         },
         {
-            "id":"6",
+            "id":"21",
             "name":"Casa Manchoalorra",
             "ubc":"C/ Mantxoalorra, 1 A, Ochagavia",
             "desc":"a",
@@ -206,7 +206,7 @@
             "price":"22"
         },
         {
-            "id":"7",
+            "id":"22",
             "name":"Camping Bardenas",
             "ubc":"Ctra. NA-660, km 13,4, Villafranca",
             "desc":"a",
@@ -217,7 +217,7 @@
             "price":"33"
         },
         {
-            "id":"8",
+            "id":"23",
             "name":"Lopenea",
             "ubc":"Elbarren Kalea, 47, Leitza",
             "desc":"a",
@@ -228,7 +228,7 @@
             "price":"32"
         },
         {
-            "id":"9",
+            "id":"24",
             "name":"Casa Rural Elurkoia",
             "ubc":"C/ Garagardoia, 19, Isaba",
             "desc":"a",
@@ -239,7 +239,7 @@
             "price":"32"
         },
         {
-            "id":"10",
+            "id":"25",
             "name":"Bordaxuria I y II",
             "ubc":"Caserío Casa Arburua, s/n, Zugarramurdi",
             "desc":"a",
@@ -252,7 +252,7 @@
     ],
     "museos":[
         {
-            "id":"1",
+            "id":"26",
             "name":"Museo de Navarra",
             "desc":"El antiguo Hospital de Nuestra Señora de la Misericordia acoge el MUSEO —así, con mayúsculas— de Navarra. En su interior se encuentra una vasta muestra de piezas que te llevan por cada una de las etapas de la historia de la Comunidad.",
             "image":"https://www.visitnavarra.es/o/adaptive-media/image/8211144/turismo-navarra-600xauto/Pamplona-Museo%20de%20Navarra-Eduardo%20Buxens.jpg",
@@ -261,8 +261,8 @@
             "es":"true"
         },
         {
-            "id":"2",
-            "name":"Museo Universidad de Navarra",
+            "id":"27",
+            "name":"Museo Universidad Navarra",
             "desc":"Expone arte contemporáneo de artistas de primera como Chillida, Picasso o Tàpies. Además es todo un centro cultural donde se celebran todo tipo de exposiciones, espectáculos de danza, muestras de cine y actividades didácticas, entre otras.",
             "image":"https://www.visitnavarra.es/o/adaptive-media/image/8211168/turismo-navarra-600xauto/Pamplona_%20Museo%20Universidad%20de%20Navarra%20(1).jpg",
             "cor1":"42.803382979162556",
@@ -270,7 +270,7 @@
             "es":"true"
         },
         {
-            "id":"3",
+            "id":"28",
             "name":"Museo Oteiza",
             "desc":"Estamos ante un museo monográfico dedicado a la figura de Jorge Oteiza, uno de los creadores más importantes de la escultura del S.XX. La colección la componen 1.650 esculturas y 2.000 piezas de su laboratorio experimental, junto con una extensa presencia de dibujos y collages.",
             "image":"https://www.visitnavarra.es/o/adaptive-media/image/15405183/turismo-navarra-600xauto/Museo%20Oteiza.jpg",
@@ -279,7 +279,7 @@
             "es":"true"
         },
         {
-            "id":"4",
+            "id":"29",
             "name":"Museo del Carlismo",
             "desc":"Este museo tiene un objetivo muy claro: preservar y difundir la historia del Carlismo en Navarra y en España. Ojo, siempre contada desde la perspectiva histórica de los siglos XIX y XX. El hogar de este museo es el Palacio del Gobernador, que desde el año 2000 acoge buena parte del legado histórico que el Partido Carlista cedió en depósito al Gobierno de Navarra.",
             "image":"https://www.visitnavarra.es/o/adaptive-media/image/15406116/turismo-navarra-600xauto/Museo%20del%20Carlismo.jpg",
@@ -288,8 +288,8 @@
             "es":"true"
         },
         {
-            "id":"5",
-            "name":"Exposición Occidens de la Catedral de Pamplona",
+            "id":"30",
+            "name":"Exposición Occidens",
             "desc":"La entrada al conjunto monumental gótico más importante de Navarra te permitirá visitar no solo las dependencias de la catedral, sino también la casa del campanero y la exposición Occidens, galardonada en Nueva York con el premio de Mejor Exposición del Mundo.",
             "image":"https://www.visitnavarra.es/o/adaptive-media/image/15402596/turismo-navarra-600xauto/c713e2bf-dc59-c3dd-eb45-8ba8a2404f05.jpg",
             "cor1":"42.81955603027828",
@@ -297,8 +297,8 @@
             "es":"true"
         },
         {
-            "id":"6",
-            "name":"Catedral de Santa María y Museo de Tudela",
+            "id":"31",
+            "name":"Catedral de Santa María",
             "desc":"Es el principal monumento de la ciudad y uno de los más notables de Navarra. De estilo gótico, destaca su espectacular Portada del Juicio, una mezcla de románico y gótico y su claustro románico, uno de los espacios más ricos a nivel histórico artísitico de la catedral.",
             "image":"https://www.visitnavarra.es/o/adaptive-media/image/15401959/turismo-navarra-600xauto/fbd3ad80-c4ab-c3ac-4a41-cd39fcac2b61.jpg",
             "cor1":"42.06332619032709",

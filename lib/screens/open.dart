@@ -27,7 +27,7 @@ class _OpenScreenState extends State<OpenScreen> {
                   Container(padding: const EdgeInsets.all(40),),
                   Text('\n__________________________'),
                   Text(
-                    'SearchNA',
+                    'TurisNA',
                     style: TextStyle(
                       fontSize: 35 ,
                       color: AppTheme.primary,

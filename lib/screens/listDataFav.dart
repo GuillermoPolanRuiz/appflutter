@@ -18,10 +18,8 @@ class _ListDataFavState extends State<ListDataFav> {
   
 
   final DatabaseService _db = DatabaseService();
-  var text = "";
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
+  Widget build(BuildContext context) {return Scaffold(
       appBar: AppBar(title: Text("Favoritos")),
       body: FutureBuilder<List<Dog>>(
       future: _db.dogs(),
@@ -31,14 +29,17 @@ class _ListDataFavState extends State<ListDataFav> {
             child: CircularProgressIndicator(),
           );
         }
+        if (snapshot.data!.length == 0) {
+          return Center(child: Text("No se encuentran registros."),);
+        }
         return Padding(
           padding: const EdgeInsets.symmetric(horizontal: 8.0),
           child: ListView.builder(
             itemCount: snapshot.data!.length,
             itemBuilder: (context, index) {
               final dog = snapshot.data![index];
-              return Card(
-                child: Card(
+              if (dog.price == "") {
+                return Card(
                     key: ValueKey(dog.id),
                     margin: const EdgeInsets.all(30),
                     color: Color.fromARGB(255, 255, 251, 251),
@@ -53,8 +54,14 @@ class _ListDataFavState extends State<ListDataFav> {
                               ),
                             ), Expanded(child: Column()),
                             ElevatedButton(
-                              onPressed: null, // delete(dog.id), 
-                              child: Icon(Icons.delete)
+                              onPressed: () {
+                                _showMyDialog(dog.id, dog.name);
+                              }, 
+                              child: Icon(Icons.delete),
+                              style: ElevatedButton.styleFrom(
+                                primary: AppTheme.primary,
+                                minimumSize: const Size(10, 20),
+                              ),
                             ),
                             Container(margin: EdgeInsets.only(bottom: 30),)],),
                           subtitle: Text(dog.desc),
@@ -63,8 +70,42 @@ class _ListDataFavState extends State<ListDataFav> {
                         btn(double.parse(dog.cor1),double.parse(dog.cor2)) // Pasamos las cordenadas y devuelve el botón
                       ],
                     )
-                  ),
               );
+              }else{
+                return Card(
+                    key: ValueKey(dog.id),
+                    margin: const EdgeInsets.all(30),
+                    color: Color.fromARGB(255, 255, 251, 251),
+                    elevation: 5,
+                    child: Column(
+                      children: [
+                        ListTile(
+                          title: Row(children: [Text(
+                              dog.name,
+                              style: TextStyle(
+                                fontSize: 20,
+                              ),
+                            ), Expanded(child: Column()),
+                            ElevatedButton(
+                              onPressed: () {
+                                _showMyDialog(dog.id, dog.name);
+                              }, 
+                              child: Icon(Icons.delete),
+                              style: ElevatedButton.styleFrom(
+                                primary: AppTheme.primary,
+                                minimumSize: const Size(10, 20),
+                              ),
+                            ),
+                            Container(margin: EdgeInsets.only(bottom: 30),)],),
+                          subtitle: Text(dog.ubc.toString() +""+ dog.desc + "\nPrecio/noche: " + dog.price.toString() + "€"),
+                        ),
+                        Image.network(dog.image, scale: 3),
+                        btn(double.parse(dog.cor1),double.parse(dog.cor2)) // Pasamos las cordenadas y devuelve el botón
+                      ],
+                    )
+                  
+              );
+              }
             },
           ),
         );
@@ -72,6 +113,43 @@ class _ListDataFavState extends State<ListDataFav> {
     )
     );
   }
+
+  Future<void> _showMyDialog(id, name) async {
+  return showDialog<void>(
+    context: context,
+    barrierDismissible: false, // user must tap button!
+    builder: (BuildContext context) {
+      return AlertDialog(
+        title: const Text('Eliminar registro'),
+        content: SingleChildScrollView(
+          child: ListBody(
+            children: <Widget>[
+              Text('¿Desea eliminar el siguiente registro?'),
+              Text("\n"+name),
+            ],
+          ),
+        ),
+        actions: <Widget>[
+          TextButton(
+            child: const Text('Sí'),
+            onPressed: () {
+              setState(() {
+                Navigator.of(context).pop();
+                delete(id);
+              });
+            },
+          ),
+          TextButton(
+            child: const Text('No'),
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
+          ),
+        ],
+      );
+    },
+  );
+}
 
   void initState() {
     super.initState();
