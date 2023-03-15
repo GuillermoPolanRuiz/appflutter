@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:io';
+import 'package:appflutter/main.dart';
 import 'package:appflutter/theme/app_theme.dart';
 import 'package:appflutter/screens/open.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
@@ -58,11 +59,25 @@ class _ConnectionCheckerDemoState extends State<ConnectionCheckerDemo> {
         backgroundColor: AppTheme.primary,
       ),
       body: Center(
-          child: Text(
-        "Conéctate a Internet para usar la aplicación.",
-        style: TextStyle(fontSize: 16),
-      )),
-    );
+          child: Column(
+            children: [
+              Expanded(child: Column()),
+              Text(
+                  "Conéctate a Internet para usar la aplicación.",
+                  style: TextStyle(fontSize: 16),
+              ),
+              ElevatedButton(onPressed: () => Navigator.push(context,MaterialPageRoute(
+                builder: (context) => MyApp()
+                )
+              ), child: Text("Reiniciar Aplicación"),
+              style: ElevatedButton.styleFrom(
+                  primary: AppTheme.primary,
+                ),
+              ),
+              Expanded(child: Column()),
+            ],
+          )
+    ));
     }
   }
   @override
