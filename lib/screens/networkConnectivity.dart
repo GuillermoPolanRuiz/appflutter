@@ -41,7 +41,7 @@ class _ConnectionCheckerDemoState extends State<ConnectionCheckerDemo> {
       if (string != "Mobile: Online") {
         ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: Icon(Icons.wifi_off)
+          content: Icon(Icons.wifi_off),
         ),
       );
       }
@@ -59,8 +59,8 @@ class _ConnectionCheckerDemoState extends State<ConnectionCheckerDemo> {
       ),
       body: Center(
           child: Text(
-        "Conéctate a Internet para usar la aplicación",
-        style: TextStyle(fontSize: 20),
+        "Conéctate a Internet para usar la aplicación.",
+        style: TextStyle(fontSize: 16),
       )),
     );
     }
