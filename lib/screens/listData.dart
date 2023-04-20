@@ -9,6 +9,7 @@ import 'package:like_button/like_button.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../../entities/model.dart';
 import '../entities/database.dart';
+import 'package:http/http.dart' as http;
 
 
 class ListDataScreen extends StatefulWidget{
@@ -171,8 +172,9 @@ class _ListDataScreen extends State<ListDataScreen> {
   // Función para leer el JSON
 
   Future<void> readJson() async{
-    final String response = await rootBundle.loadString('assets/data.json');
-    final data = await json.decode(response);
+    //final String response2 = await rootBundle.loadString('assets/data.json');
+    final response = await http.get(Uri.parse('https://apimocha.com/proyectodam/data'));
+    final data = await json.decode(response.body);
     setState(() {
       _items = data["${widget.name}"];
       //print("${_items.length}");

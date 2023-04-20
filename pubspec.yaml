@@ -31,6 +31,8 @@ dependencies:
   flutter:
     sdk: flutter
     
+  http: ^0.13.5
+  # dio: ^3.0.6
   
 
   url_launcher: ^6.1.5
@@ -42,6 +44,7 @@ dependencies:
   path_provider:  ^2.0.12
   sqflite: ^2.2.5
   like_button: ^2.0.4
+  #dio: ^5.1.1
 
 dev_dependencies:
   flutter_test:
