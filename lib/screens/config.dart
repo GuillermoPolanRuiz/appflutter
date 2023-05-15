@@ -15,7 +15,6 @@ class ConfigScreen extends StatefulWidget {
 class _ConfigScreenState extends State<ConfigScreen> {
 
 
-  bool isSwitched = false;
 
   @override
   Widget build(BuildContext context) {

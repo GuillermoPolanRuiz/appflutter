@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/widgets.dart';
 
-class Dog {
+class Sitio {
   final int id;
   final String name;
   final String desc;
@@ -13,7 +13,7 @@ class Dog {
   final String? price;
   final String? ubc;
 
-  Dog({
+  Sitio({
     required this.id,
     required this.name,
     required this.desc,
@@ -41,8 +41,8 @@ class Dog {
     };
   }
 
-  factory Dog.fromMap(Map<String, dynamic> map) {
-    return Dog(
+  factory Sitio.fromMap(Map<String, dynamic> map) {
+    return Sitio(
       id: map['id']?.toInt() ?? 0,
       name: map['name'] ?? '',
       desc: map['desc'] ?? '',
@@ -57,7 +57,7 @@ class Dog {
 
   String toJson() => json.encode(toMap());
 
-  factory Dog.fromJson(String source) => Dog.fromMap(json.decode(source));
+  factory Sitio.fromJson(String source) => Sitio.fromMap(json.decode(source));
 
   // Implement toString to make it easier to see information about
   // each dog when using the print statement.

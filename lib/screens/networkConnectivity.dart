@@ -6,6 +6,8 @@ import 'package:appflutter/screens/open.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
+import 'package:is_first_run/is_first_run.dart';
 class ConnectionCheckerDemo extends StatefulWidget {
   const ConnectionCheckerDemo({Key? key}) : super(key: key);
   @override
@@ -13,11 +15,16 @@ class ConnectionCheckerDemo extends StatefulWidget {
 }
 class _ConnectionCheckerDemoState extends State<ConnectionCheckerDemo> {
   Map _source = {ConnectivityResult.none: false};
+  bool first = false;
   final NetworkConnectivity _networkConnectivity = NetworkConnectivity.instance;
   String string = '';
   @override
   void initState() {
     super.initState();
+    SchedulerBinding.instance.addPostFrameCallback((_) {
+      verifyIsFisrt();
+    });
+
     _networkConnectivity.initialise();
     _networkConnectivity.myStream.listen((source) {
       _source = source;
@@ -39,19 +46,24 @@ class _ConnectionCheckerDemoState extends State<ConnectionCheckerDemo> {
       // 2.
       setState(() {});
       // 3.
-      if (string != "Mobile: Online") {
-        ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: Icon(Icons.wifi_off),
-        ),
-      );
-      }
+      // if (string != "Mobile: Online" || string != "WiFi: Online") {
+      //   ScaffoldMessenger.of(context).showSnackBar(
+      //   SnackBar(
+      //     content: Icon(Icons.wifi_off, color: AppTheme.primary),
+      //   ),
+      // );
+      // }
     });
   }
+
+  void verifyIsFisrt() async{
+    first = await IsFirstRun.isFirstRun();
+  }
+
   @override
   Widget build(BuildContext context) {
-    if (string == "Mobile: Online") {
-      return ScrollScreen();
+    if (string == "Mobile: Online" || string == "WiFi: Online") {
+      return ScrollScreen(first: first,);
     }else{
       return Scaffold(
       appBar: AppBar(

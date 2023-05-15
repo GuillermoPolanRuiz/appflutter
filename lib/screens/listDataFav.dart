@@ -21,8 +21,8 @@ class _ListDataFavState extends State<ListDataFav> {
   @override
   Widget build(BuildContext context) {return Scaffold(
       appBar: AppBar(title: Text("Favoritos")),
-      body: FutureBuilder<List<Dog>>(
-      future: _db.dogs(),
+      body: FutureBuilder<List<Sitio>>(
+      future: _db.favs(),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
           return Center(
@@ -37,10 +37,10 @@ class _ListDataFavState extends State<ListDataFav> {
           child: ListView.builder(
             itemCount: snapshot.data!.length,
             itemBuilder: (context, index) {
-              final dog = snapshot.data![index];
-              if (dog.price == "") {
+              final sitio = snapshot.data![index];
+              if (sitio.price == "") {
                 return Card(
-                    key: ValueKey(dog.id),
+                    key: ValueKey(sitio.id),
                     margin: const EdgeInsets.all(30),
                     color: Color.fromARGB(255, 255, 251, 251),
                     elevation: 5,
@@ -48,14 +48,14 @@ class _ListDataFavState extends State<ListDataFav> {
                       children: [
                         ListTile(
                           title: Row(children: [Text(
-                              dog.name,
+                              sitio.name,
                               style: TextStyle(
                                 fontSize: 20,
                               ),
                             ), Expanded(child: Column()),
                             ElevatedButton(
                               onPressed: () {
-                                _showMyDialog(dog.id, dog.name);
+                                _showMyDialog(sitio.id, sitio.name);
                               }, 
                               child: Icon(Icons.delete),
                               style: ElevatedButton.styleFrom(
@@ -64,16 +64,16 @@ class _ListDataFavState extends State<ListDataFav> {
                               ),
                             ),
                             Container(margin: EdgeInsets.only(bottom: 30),)],),
-                          subtitle: Text(dog.desc),
+                          subtitle: Text(sitio.desc),
                         ),
-                        Image.network(dog.image, scale: 3),
-                        btn(double.parse(dog.cor1),double.parse(dog.cor2)) // Pasamos las cordenadas y devuelve el botón
+                        Image.network(sitio.image, scale: 3),
+                        btn(double.parse(sitio.cor1),double.parse(sitio.cor2)) // Pasamos las cordenadas y devuelve el botón
                       ],
                     )
               );
               }else{
                 return Card(
-                    key: ValueKey(dog.id),
+                    key: ValueKey(sitio.id),
                     margin: const EdgeInsets.all(30),
                     color: Color.fromARGB(255, 255, 251, 251),
                     elevation: 5,
@@ -81,14 +81,14 @@ class _ListDataFavState extends State<ListDataFav> {
                       children: [
                         ListTile(
                           title: Row(children: [Text(
-                              dog.name,
+                              sitio.name,
                               style: TextStyle(
                                 fontSize: 20,
                               ),
                             ), Expanded(child: Column()),
                             ElevatedButton(
                               onPressed: () {
-                                _showMyDialog(dog.id, dog.name);
+                                _showMyDialog(sitio.id, sitio.name);
                               }, 
                               child: Icon(Icons.delete),
                               style: ElevatedButton.styleFrom(
@@ -97,10 +97,10 @@ class _ListDataFavState extends State<ListDataFav> {
                               ),
                             ),
                             Container(margin: EdgeInsets.only(bottom: 30),)],),
-                          subtitle: Text(dog.ubc.toString() +""+ dog.desc + "\nPrecio/noche: " + dog.price.toString() + "€"),
+                          subtitle: Text(sitio.ubc.toString() +""+ sitio.desc + "\nPrecio/noche: " + sitio.price.toString() + "€"),
                         ),
-                        Image.network(dog.image, scale: 3),
-                        btn(double.parse(dog.cor1),double.parse(dog.cor2)) // Pasamos las cordenadas y devuelve el botón
+                        Image.network(sitio.image, scale: 3),
+                        btn(double.parse(sitio.cor1),double.parse(sitio.cor2)) // Pasamos las cordenadas y devuelve el botón
                       ],
                     )
                   
@@ -117,7 +117,7 @@ class _ListDataFavState extends State<ListDataFav> {
   Future<void> _showMyDialog(id, name) async {
   return showDialog<void>(
     context: context,
-    barrierDismissible: false, // user must tap button!
+    barrierDismissible: false, 
     builder: (BuildContext context) {
       return AlertDialog(
         title: const Text('Eliminar registro'),
@@ -176,7 +176,7 @@ TextButton btn(double latitude, double longitude){
           );
   }
   void delete(id){
-    _db.deleteDog(id);
+    _db.deleteFav(id); // Borra el registro
   }
 
 }

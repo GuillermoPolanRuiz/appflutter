@@ -14,10 +14,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'SearchNA',
+      title: 'TurisNA',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.mainTheme,
-      // home: const ScrollScreen()
       home: ConnectionCheckerDemo(), // Comprobar si tiene conexión a Internet
     );
   }
