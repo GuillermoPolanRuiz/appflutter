@@ -2,6 +2,7 @@ import 'package:appflutter/entities/database.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:readmore/readmore.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../entities/model.dart';
@@ -51,7 +52,7 @@ class _ListDataFavState extends State<ListDataFav> {
                           title: Row(children: [Text(
                               sitio.name,
                               style: TextStyle(
-                                fontSize: 20,
+                                fontSize: 18,
                               ),
                             ), Expanded(child: Column()),
                             ElevatedButton(
@@ -65,7 +66,7 @@ class _ListDataFavState extends State<ListDataFav> {
                               ),
                             ),
                             Container(margin: EdgeInsets.only(bottom: 30),)],),
-                          subtitle: Text(sitio.desc),
+                          subtitle: getReadMore(sitio.desc),
                         ),
                         CachedNetworkImage(imageUrl: sitio.image, placeholder: (context, url) => new CircularProgressIndicator(color: AppTheme.BGcolor,backgroundColor: AppTheme.primary,strokeWidth: 8,),),
                         btn(double.parse(sitio.cor1),double.parse(sitio.cor2)) // Pasamos las cordenadas y devuelve el botón
@@ -112,6 +113,29 @@ class _ListDataFavState extends State<ListDataFav> {
         );
       },
     )
+    );
+  }
+
+  Container getReadMore(String text){
+    return Container(
+      child: ReadMoreText(
+        text,
+        trimLines: 2,
+        trimMode: TrimMode.Line,
+        trimCollapsedText: " Ver más ",
+        trimExpandedText: " Ver menos ",
+        lessStyle: TextStyle(
+          fontWeight: FontWeight.bold,
+          color: AppTheme.primary
+        ),
+        moreStyle: TextStyle(
+          fontWeight: FontWeight.bold,
+          color: AppTheme.primary
+        ),
+        style: TextStyle(
+          fontSize: 16,
+        ),
+      ),
     );
   }
 
