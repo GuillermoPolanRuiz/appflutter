@@ -1,4 +1,5 @@
 import 'package:appflutter/entities/database.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -66,7 +67,7 @@ class _ListDataFavState extends State<ListDataFav> {
                             Container(margin: EdgeInsets.only(bottom: 30),)],),
                           subtitle: Text(sitio.desc),
                         ),
-                        Image.network(sitio.image, scale: 3),
+                        CachedNetworkImage(imageUrl: sitio.image, placeholder: (context, url) => new CircularProgressIndicator(color: AppTheme.BGcolor,backgroundColor: AppTheme.primary,strokeWidth: 8,),),
                         btn(double.parse(sitio.cor1),double.parse(sitio.cor2)) // Pasamos las cordenadas y devuelve el botón
                       ],
                     )
